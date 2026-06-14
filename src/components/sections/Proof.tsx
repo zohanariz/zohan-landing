@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TrendingUp, Cpu, Compass } from "lucide-react";
+import { Lock } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -189,15 +189,15 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             
             <ul className="flex flex-col gap-3.5 list-none mb-8">
               <li className="flex gap-3 text-sm leading-[1.65] text-[#F0ECE3]/75 font-light items-start">
-                <TrendingUp className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                <Lock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span>A live revenue projection built around your audience size</span>
               </li>
               <li className="flex gap-3 text-sm leading-[1.65] text-[#F0ECE3]/75 font-light items-start">
-                <Cpu className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                <Lock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span>The exact system that generates $10K+ monthly predictably</span>
               </li>
               <li className="flex gap-3 text-sm leading-[1.65] text-[#F0ECE3]/75 font-light items-start">
-                <Compass className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                <Lock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span>Where we're at so far — honest context, no hype</span>
               </li>
             </ul>
