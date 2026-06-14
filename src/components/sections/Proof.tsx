@@ -202,7 +202,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
               </li>
             </ul>
 
-            <p className="text-[11px] text-muted italic font-sans font-light pl-6">
+            <p className="text-[11px] text-gold italic font-sans font-light pl-6">
               ↑ unlocked the moment you book a call
             </p>
           </div>
