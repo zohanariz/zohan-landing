@@ -108,7 +108,7 @@ export default function StrategySession() {
 
       // 1. Supabase insert
       if (supabase) {
-        const { error } = await supabase.from("leads").insert([payload]);
+        const { error } = await supabase.from("creator model").insert([payload]);
         if (error) console.error("Supabase error:", error);
       }
 

@@ -64,7 +64,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
       // 1. Supabase Insertion
       if (supabase) {
-        const { error } = await supabase.from("leads").insert([payload]);
+        const { error } = await supabase.from("creator model").insert([payload]);
         if (error) console.error("Supabase insert error:", error);
       } else {
         console.warn("Supabase not configured. Storing locally in console.");
