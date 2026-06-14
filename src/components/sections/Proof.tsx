@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Lock } from "lucide-react";
+import BookingButton from "@/components/ui/BookingButton";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -250,12 +251,13 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             I work with creators who value integrity as much as income. <strong className="text-white font-semibold">If that's you, let's talk.</strong>
           </p>
           <div className="flex flex-col items-start gap-2 select-none">
-            <button
+            <BookingButton
               onClick={onOpenBooking}
+              variant="cut"
               className="btn-gold text-sm font-semibold whitespace-nowrap"
             >
               See Our Results on the Call →
-            </button>
+            </BookingButton>
             <p className="text-[12px] text-white font-semibold italic pl-1">
               No pitch. No pressure.
             </p>

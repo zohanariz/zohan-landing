@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/ui/BookingButton";
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -34,12 +34,13 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       </a>
       
       {/* Right Action Button */}
-      <Button
+      <BookingButton
         onClick={onOpenBooking}
-        className="bg-gold hover:bg-gold2 text-black font-sans font-medium text-[11px] sm:text-[12px] tracking-[0.12em] uppercase px-4 sm:px-6 py-2.5 h-auto rounded-none cursor-pointer transition-all duration-300"
+        variant="rect"
+        className="bg-gold hover:bg-gold2 text-black font-sans font-medium text-[11px] sm:text-[12px] tracking-[0.12em] uppercase px-4 sm:px-6 py-2.5 h-auto rounded-none"
       >
         Let's Talk
-      </Button>
+      </BookingButton>
     </nav>
   );
 }

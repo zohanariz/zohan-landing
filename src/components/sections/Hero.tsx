@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
+import BookingButton from "@/components/ui/BookingButton";
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -240,12 +241,13 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
         {/* Actions Button */}
         <div className="hero-anim flex flex-col items-center gap-3">
-          <button
+          <BookingButton
             onClick={onOpenBooking}
-            className="bg-gold hover:bg-gold2 text-black font-sans font-bold text-[16px] sm:text-[20px] py-3.5 px-8 sm:py-4.5 sm:px-14 rounded-full cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl hover:translate-y-[-2px] uppercase tracking-wide"
+            variant="pill"
+            className="bg-gold hover:bg-gold2 text-black font-sans font-bold text-[16px] sm:text-[20px] py-3.5 px-8 sm:py-4.5 sm:px-14 rounded-full shadow-lg hover:shadow-xl uppercase tracking-wide animate-cta-pulse"
           >
             Book a Discovery Call
-          </button>
+          </BookingButton>
           <span className="text-white font-semibold text-xs italic tracking-wide">
             No pitch. No pressure. No obligation.
           </span>

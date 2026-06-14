@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BookingButton from "@/components/ui/BookingButton";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -162,12 +163,13 @@ export default function WhatWeDo({ onOpenBooking }: WhatWeDoProps) {
 
             {/* Button & Subtext */}
             <div className="position-reveal flex flex-col items-start gap-2.5">
-              <button
+              <BookingButton
                 onClick={onOpenBooking}
+                variant="cut"
                 className="btn-gold px-11 py-5 text-[15px]"
               >
                 Book a Free Strategy Call →
-              </button>
+              </BookingButton>
               <p className="text-[14px] text-white/50 italic font-sans pl-1">
                 15 minutes. No pitch. Just clarity.
               </p>

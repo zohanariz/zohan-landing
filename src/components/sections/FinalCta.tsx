@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BookingButton from "@/components/ui/BookingButton";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -60,12 +61,13 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
         </p>
 
         <div className="flex flex-col items-center gap-3.5">
-          <button
+          <BookingButton
             onClick={onOpenBooking}
+            variant="cut"
             className="btn-gold text-[15px] px-[52px] py-[20px]"
           >
             Book a Discovery Call →
-          </button>
+          </BookingButton>
           <p className="text-[13px] text-white font-semibold italic">
             No pitch. No pressure. No obligation.
           </p>
