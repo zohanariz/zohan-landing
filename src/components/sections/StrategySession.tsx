@@ -226,7 +226,7 @@ export default function StrategySession() {
                 >
                   <div>
                     <h3 className="font-outfit text-xl font-extrabold text-white uppercase tracking-wide mb-2">
-                      Claim Your 30-Minute Strategy Session
+                      Claim Your 15-Minute Strategy Session
                     </h3>
                     <p className="text-xs text-muted font-mono uppercase tracking-wider mb-6">
                       Select a time that aligns with your peak focus hours.

@@ -151,7 +151,7 @@ export default function FitTest() {
 
         {/* Lower Bottom Banner Span */}
         <p className="fit-header-reveal text-center text-sm md:text-[14px] text-muted italic leading-relaxed max-w-[600px] mx-auto font-light">
-          If you read the left column and thought <strong className="text-white font-semibold">"that's me"</strong> — it probably is. The next step is a free 30-minute strategy call. No pitch. Just an honest look at what's possible.
+          If you read the left column and thought <strong className="text-white font-semibold">"that's me"</strong> — it probably is. The next step is a free 15-minute strategy call. No pitch. Just an honest look at what's possible.
         </p>
 
       </div>

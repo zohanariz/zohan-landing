@@ -56,7 +56,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
         </h2>
         
         <p className="text-sm md:text-base text-muted leading-[1.75] max-w-[480px] mb-12 font-light">
-          30 minutes. Live revenue projection built around your audience. No pitch. Just an honest look at what's possible.
+          15 minutes. Live revenue projection built around your audience. No pitch. Just an honest look at what's possible.
         </p>
 
         <div className="flex flex-col items-center gap-3.5">

@@ -274,7 +274,29 @@ export default function PainPoints() {
             <div className="pain-card-reveal group relative sm:col-span-2 lg:col-span-3 p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300">
               <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col items-start text-left transition-colors duration-300 group-hover:bg-dark4">
                 <div className="text-[22px] mb-4 opacity-80 select-none">
-                  🤖
+                  <svg className="w-[28px] h-[28px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Gear body circle */}
+                    <circle cx="50" cy="50" r="34" stroke="currentColor" strokeWidth="6.5" className="text-gold/90" />
+                    {/* Teeth */}
+                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
+                    <rect x="45" y="78" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
+                    <rect x="10" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
+                    <rect x="78" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
+                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(45 50 50)" />
+                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(135 50 50)" />
+                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(225 50 50)" />
+                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(315 50 50)" />
+                    
+                    {/* Circuit tracks */}
+                    <path d="M 28 62 L 38 52 L 38 38 L 46 30" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+                    <circle cx="46" cy="30" r="4.5" fill="currentColor" className="text-gold" />
+
+                    <path d="M 32 68 L 58 42" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+                    <circle cx="58" cy="42" r="4.5" fill="currentColor" className="text-gold" />
+
+                    <path d="M 38 74 L 48 64 L 58 64 L 66 56" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+                    <circle cx="66" cy="56" r="4.5" fill="currentColor" className="text-gold" />
+                  </svg>
                 </div>
                 <h3 className="font-sans text-[16px] font-semibold text-white mb-2.5 transition-colors duration-300 group-hover:text-gold">
                   No automated system working while you sleep

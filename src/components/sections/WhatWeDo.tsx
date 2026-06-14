@@ -169,7 +169,7 @@ export default function WhatWeDo({ onOpenBooking }: WhatWeDoProps) {
                 Book a Free Strategy Call →
               </button>
               <p className="text-[14px] text-white/50 italic font-sans pl-1">
-                30 minutes. No pitch. Just clarity.
+                15 minutes. No pitch. Just clarity.
               </p>
             </div>
           </div>
