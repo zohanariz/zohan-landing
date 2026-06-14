@@ -172,12 +172,12 @@ export default function PainPoints() {
         </svg>
       ),
       title: "Trapped in the low-ticket cycle",
-      desc: "Ebooks at $9, PDFs at $7, tracking sheets for $5. You'd need thousands of sales every month just to hit decent income. Low-ticket offers keep you busy — they don't build real wealth."
+      desc: "Ebooks at $29, PDFs at $17, tracking sheets for $15. You'd need thousands of sales every month just to hit decent income. Low-ticket offers keep you busy — they don't build real wealth."
     },
     {
       icon: "❓",
       title: "No clear product or launch plan",
-      desc: "You have an audience that trusts you but nothing of your own to sell them. And even when you think about creating something, you don't know what they'd actually pay for — or where to begin."
+      desc: "You have an audience that trusts you but nothing of your own to offer them. And even when you think about creating something, you don't know what they'd actually pay for — or where to begin."
     }
   ];
 
