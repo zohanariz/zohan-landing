@@ -1,26 +1,204 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @theme inline {
+  --font-sans: var(--font-sans), 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Canela', var(--font-serif), 'Playfair Display', Georgia, serif;
+  --font-anton: var(--font-anton), 'Anton', sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  --font-outfit: var(--font-outfit), 'Outfit', sans-serif;
+  
+  --color-gold: #7CFF4D;
+  --color-gold2: #9EFF7D;
+  --color-dark: transparent;
+  --color-dark2: rgba(17, 17, 17, 0.65);
+  --color-dark3: #161616;
+  --color-dark4: #1C1C1C;
+  --color-dark5: #222222;
+  --color-white: #F0ECE3;
+  --color-muted: #7A7670;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --gold: #7CFF4D;
+  --gold2: #9EFF7D;
+  --dark: transparent;
+  --dark2: rgba(17, 17, 17, 0.65);
+  --dark3: #161616;
+  --dark4: #1C1C1C;
+  --dark5: #222222;
+  --white: #F0ECE3;
+  --muted-text: #7A7670;
+  
+  --background: #0D0D0D;
+  --foreground: #F0ECE3;
+  
+  --card: #161616;
+  --card-foreground: #F0ECE3;
+  
+  --popover: #161616;
+  --popover-foreground: #F0ECE3;
+  
+  --primary: #7CFF4D;
+  --primary-foreground: #0D0D0D;
+  
+  --secondary: #161616;
+  --secondary-foreground: #F0ECE3;
+  
+  --muted: #161616;
+  --muted-foreground: #7A7670;
+  
+  --accent: #7CFF4D;
+  --accent-foreground: #0D0D0D;
+  
+  --border: rgba(255, 255, 255, 0.06);
+  --input: #161616;
+  --ring: #7CFF4D;
+  
+  --radius: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    background: #0D0D0D;
+  }
+  
+  body {
+    @apply text-foreground font-sans antialiased font-light;
+    background: radial-gradient(circle at 50% 0%, #0d260f 0%, #081508 40%, #000000 100%) no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #7CFF4D;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Premium Gold Buttons and styling custom overrides */
+.btn-gold {
+  display: inline-block;
+  background: var(--gold);
+  color: #000000;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: all .3s ease;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .btn-gold {
+    font-size: 14px;
+    padding: 18px 44px;
+  }
+}
+
+.btn-gold:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+}
+
+.btn-ghost-sm {
+  font-size: 12px;
+  color: var(--muted-text);
+  letter-spacing: .08em;
+  font-style: italic;
+  font-family: var(--font-sans);
+}
+
+/* Section styling components */
+.s-tag {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+}
+
+.s-tag::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.s-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.s-title em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.gold-bar {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 24px 0;
+}
+
+/* Custom cards styling */
+.pain-card {
+  background: var(--dark3);
+  padding: 36px 32px;
+  border: 1px solid rgba(255, 255, 255, .04);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all .35s ease;
+}
+
+.pain-card:hover {
+  border-color: rgba(201, 168, 76, .2);
+  background: var(--dark4);
+}
+
+/* Scroll Animations initial state class */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(24px);
 }

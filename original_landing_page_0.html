@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zohan Ariz — Turn Your Audience Into Recurring Income</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --lime: #7BF24A;
+    --lime-dim: #4DA82E;
+    --lime-glow: rgba(123,242,74,0.12);
+    --bg: #0C0C0C;
+    --bg-card: #131313;
+    --bg-card2: #191919;
+    --border: rgba(123,242,74,0.18);
+    --border-soft: rgba(255,255,255,0.07);
+    --text: #EFEFEF;
+    --text-muted: #7A7A7A;
+    --text-dim: #3A3A3A;
+    --red: #E05555;
+    --green-check: #7BF24A;
+    --dot: #7BF24A;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(12,12,12,0.9);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .nav-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500; font-size: 1rem;
+    letter-spacing: 0.01em;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .nav-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--lime);
+    box-shadow: 0 0 8px var(--lime);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; box-shadow: 0 0 8px var(--lime); }
+    50% { opacity:0.6; box-shadow: 0 0 16px var(--lime); }
+  }
+  .nav-logo span { color: var(--lime); font-weight: 500; }
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.55rem 1.6rem;
+    background: var(--lime);
+    color: #000;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+  .nav-cta:hover { background: #a0ff6a; transform: translateY(-1px); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+  .container-wide { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 6rem 0; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding-top: 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg-grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(123,242,74,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(123,242,74,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  }
+  .hero-glow {
+    position: absolute; top: 10%; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px; pointer-events: none;
+    background: radial-gradient(circle, rgba(123,242,74,0.07) 0%, transparent 65%);
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--lime); margin-bottom: 1.8rem;
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.9rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--lime); display: block;
+  }
+  h1.hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900; line-height: 0.95;
+    letter-spacing: -0.01em; text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+  h1.hero-title em { font-style: italic; color: var(--lime); }
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 300;
+    color: var(--text-muted); max-width: 520px;
+    line-height: 1.75; margin-bottom: 2.5rem;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  .btn-lime {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--lime);
+    color: #000;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.15s, transform 0.15s;
+  }
+  .btn-lime:hover { background: #a0ff6a; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    font-size: 0.9rem; font-weight: 400;
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--lime); color: var(--lime); }
+  .hero-note { font-size: 0.76rem; color: var(--text-dim); letter-spacing: 0.06em; }
+
+  /* ── STATS ── */
+  .stats-strip {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .stat-item {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border-soft);
+    position: relative;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-item::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: var(--lime);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .stat-item:hover::after { transform: scaleX(1); }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.8rem; font-weight: 900;
+    color: var(--lime); line-height: 1;
+    margin-bottom: 0.3rem; display: block;
+    letter-spacing: -0.01em;
+  }
+  .stat-label { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── SECTION LABELS ── */
+  .section-eyebrow {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--lime); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-eyebrow::before { content:'//'; opacity:0.5; }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900; line-height: 1; text-transform: uppercase;
+    letter-spacing: -0.01em; margin-bottom: 1.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--lime); }
+  .section-body { font-size: 1rem; color: var(--text-muted); max-width: 580px; line-height: 1.75; }
+
+  /* ── PAIN ── */
+  .pain-section { background: var(--bg); }
+  .pain-intro { font-size: 1rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.7; }
+  .pain-intro strong { color: var(--text); }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1px; background: var(--border-soft);
+    border: 1px solid var(--border-soft);
+    margin-bottom: 1px;
+  }
+  .pain-card {
+    background: var(--bg-card);
+    padding: 1.8rem;
+    transition: background 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .pain-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: var(--lime);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s;
+  }
+  .pain-card:hover { background: var(--bg-card2); }
+  .pain-card:hover::before { transform: scaleX(1); }
+  .pain-icon { font-size: 1.3rem; margin-bottom: 1rem; display: block; }
+  .pain-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.1rem;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 0.6rem; color: var(--text);
+  }
+  .pain-card p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
+  .pain-full {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-top: none;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .pain-full h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.1rem;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 0.5rem; color: var(--text);
+  }
+  .pain-full p { font-size: 0.86rem; color: var(--text-muted); }
+  .callout {
+    border-left: 3px solid var(--lime);
+    padding: 1.2rem 1.6rem;
+    background: var(--lime-glow);
+    font-size: 1rem; color: var(--text); line-height: 1.7;
+  }
+  .callout em { font-style: normal; color: var(--lime); font-weight: 500; }
+
+  /* ── WHAT I DO ── */
+  .what-section { background: var(--bg-card); }
+  .what-body {
+    font-size: 1.1rem; color: var(--text-muted);
+    line-height: 1.8; margin-bottom: 1.4rem;
+    max-width: 700px;
+  }
+  .what-body strong { color: var(--text); font-weight: 500; }
+  .what-body em { font-style: normal; color: var(--lime); font-weight: 600; }
+  .what-quote {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem; font-weight: 800; font-style: italic;
+    color: var(--lime); text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--lime);
+  }
+
+  /* ── FIT ── */
+  .fit-section { background: var(--bg); }
+  .fit-grid {
+    display: grid; grid-template-columns: 1fr 1px 1fr;
+    border: 1px solid var(--border-soft);
+    margin-top: 3rem;
+  }
+  .fit-divider { background: var(--border-soft); }
+  .fit-col { padding: 2.5rem; }
+  .fit-col-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 1.4rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .fit-good .fit-col-header { color: var(--lime); }
+  .fit-bad .fit-col-header { color: var(--red); }
+  .fit-col h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 1.3rem;
+    text-transform: uppercase; line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  .fit-item {
+    display: flex; gap: 0.8rem;
+    align-items: flex-start; margin-bottom: 1.1rem;
+  }
+  .fit-check {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; flex-shrink: 0; margin-top: 1px;
+    font-weight: 700;
+  }
+  .fit-good .fit-check { color: var(--lime); }
+  .fit-bad .fit-check { color: var(--red); }
+  .fit-item-title { font-weight: 500; font-size: 0.9rem; margin-bottom: 0.2rem; }
+  .fit-item-body { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+  .fit-close {
+    grid-column: 1 / -1;
+    padding: 1.8rem 2.5rem;
+    border-top: 1px solid var(--border-soft);
+    font-size: 0.9rem; color: var(--text-muted);
+    text-align: center;
+  }
+  .fit-close strong { color: var(--text); }
+
+  /* ── PROOF ── */
+  .proof-section { background: var(--bg-card); }
+  .proof-quote {
+    font-size: 1.05rem; font-style: italic;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 1.8rem 2rem 1.8rem 3.5rem;
+    background: var(--lime-glow);
+    margin: 2.5rem 0; line-height: 1.75;
+    position: relative;
+  }
+  .proof-quote::before {
+    content: '"';
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 5rem; line-height: 1;
+    color: var(--lime); opacity: 0.25;
+    position: absolute; top: 0.5rem; left: 1rem;
+  }
+  .proof-quote em { font-style: normal; color: var(--lime); }
+  .proof-steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2.5rem 0; }
+  .proof-step { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .proof-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.5rem; font-weight: 900;
+    color: var(--lime); opacity: 0.25; line-height: 1;
+    flex-shrink: 0; width: 48px;
+  }
+  .proof-step-title { font-weight: 500; font-size: 1rem; margin-bottom: 0.35rem; }
+  .proof-step-body { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+  .proof-step-body em { font-style: normal; color: var(--lime); font-weight: 500; }
+  .call-box {
+    border: 1px solid var(--border);
+    background: var(--lime-glow);
+    padding: 2rem; margin: 2.5rem 0;
+  }
+  .call-box-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--lime); margin-bottom: 1.2rem;
+  }
+  .call-items { display: flex; flex-direction: column; gap: 0.75rem; }
+  .call-item {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.9rem; color: var(--text-muted);
+  }
+  .call-item::before { content: '→'; color: var(--lime); font-size: 0.8rem; }
+  .call-unlocked {
+    font-size: 0.73rem; color: var(--text-dim);
+    text-align: center; margin-top: 1rem;
+    letter-spacing: 0.05em; font-style: italic;
+  }
+  .proof-badges {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border-soft);
+    border: 1px solid var(--border-soft); margin: 2rem 0;
+  }
+  .proof-badge {
+    background: var(--bg); padding: 1.4rem;
+    text-align: center;
+  }
+  .proof-badge-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .proof-badge-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .proof-badge-body { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--bg); }
+  .faq-list { margin-top: 2.5rem; border-top: 1px solid var(--border-soft); }
+  .faq-item { border-bottom: 1px solid var(--border-soft); }
+  .faq-q {
+    width: 100%; text-align: left;
+    background: none; border: none; cursor: pointer;
+    padding: 1.4rem 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.95rem; font-weight: 500; color: var(--text);
+    font-family: inherit; gap: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--lime); }
+  .faq-arrow {
+    width: 22px; height: 22px; flex-shrink: 0;
+    border: 1px solid var(--text-dim);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; color: var(--text-dim);
+    transition: transform 0.3s, border-color 0.2s, color 0.2s;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); border-color: var(--lime); color: var(--lime); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .faq-item.open .faq-a { max-height: 400px; }
+  .faq-a-inner { padding: 0 0 1.4rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+  .faq-a-inner em { font-style: normal; color: var(--lime); font-weight: 500; }
+
+  /* ── FINAL CTA ── */
+  .cta-section {
+    background: var(--bg-card);
+    text-align: center; padding: 8rem 2rem;
+    position: relative; overflow: hidden;
+  }
+  .cta-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 700px; height: 700px; pointer-events: none;
+    background: radial-gradient(circle, rgba(123,242,74,0.07) 0%, transparent 65%);
+  }
+  .cta-section h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900; text-transform: uppercase;
+    line-height: 0.95; letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+    position: relative; z-index: 1;
+  }
+  .cta-section h2 em { font-style: italic; color: var(--lime); }
+  .cta-section p {
+    font-size: 1rem; color: var(--text-muted);
+    max-width: 460px; margin: 0 auto 2.5rem;
+    font-weight: 300; position: relative; z-index: 1;
+  }
+  .cta-note { font-size: 0.76rem; color: var(--text-dim); margin-top: 1rem; letter-spacing: 0.06em; position: relative; z-index: 1; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border-soft);
+    padding: 1.8rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.95rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .footer-logo span { color: var(--lime); }
+  .footer-copy { font-size: 0.76rem; color: var(--text-dim); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border-soft); margin: 0; }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stat-item:nth-child(2) { border-right: none; }
+    .fit-grid { grid-template-columns: 1fr; }
+    .fit-divider { display: none; }
+    .proof-badges { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-dot"></div>
+    Zohan<span>Ariz</span>
+  </div>
+  <a href="#book" class="nav-cta">Let's Talk</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-eyebrow reveal">For Instagram Creators · 20K–200K Followers</div>
+    <h1 class="hero-title reveal">
+      You've Built<br>The Audience.<br>Now Build<br><em>Recurring Income.</em>
+    </h1>
+    <p class="hero-sub reveal">
+      I help Instagram creators make <strong>$10K+ per month</strong> from their own digital products — without sponsorships, affiliates, extra work, or upfront investment. In less than <strong>45 days.</strong>
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#book" class="btn-lime">Book a Discovery Call →</a>
+      <a href="#how" class="btn-outline">See How It Works</a>
+    </div>
+    <p class="hero-note reveal">No pitch. No pressure. No obligation.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="container-wide">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">$24,850</span>
+        <span class="stat-label">Monthly Revenue Achieved</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">&lt;45</span>
+        <span class="stat-label">Days to First Launch</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">80%</span>
+        <span class="stat-label">Revenue You Keep</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">$0</span>
+        <span class="stat-label">Upfront Investment</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="pain-section">
+  <div class="container">
+    <p class="section-eyebrow reveal">Sound Familiar?</p>
+    <h2 class="section-title reveal">Most creators I talk to have<br>2 or 3 of these. <em>A few have all 7.</em></h2>
+    <p class="pain-intro reveal">Read through and count yours — then we'll know exactly where to start.</p>
+
+    <div class="pain-grid reveal">
+      <div class="pain-card">
+        <span class="pain-icon">📉</span>
+        <h3>Income Feels Unpredictable</h3>
+        <p>Some months are great, some are slow, and you never really know what's coming. You can't plan, save, or grow when your income has no consistency.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">↗</span>
+        <h3>Need Revenue Beyond Sponsorships</h3>
+        <p>You know brand deals can't be your only income forever. You want something you own, something that compounds — you just haven't built it yet.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🔗</span>
+        <h3>Affiliate Income Isn't Enough</h3>
+        <p>You share links, a few people click, and the commission barely adds up. It works as a nice bonus — not as a real income stream you can count on.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">📩</span>
+        <h3>Followers Already Ask For Help</h3>
+        <p>People DM you for advice, recommendations, and guidance every day. The demand is already there — you just don't have a way to monetize it yet.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🔄</span>
+        <h3>Trapped In The Low-Ticket Cycle</h3>
+        <p>Ebooks at $9, PDFs at $7, tracking sheets for $5. You'd need thousands of sales every month just to hit decent income. Low-ticket keeps you busy — not wealthy.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🗺️</span>
+        <h3>No Clear Product Or Launch Plan</h3>
+        <p>You have an audience that trusts you but nothing of your own to sell them. You don't know what they'd actually pay for — or where to begin.</p>
+      </div>
+    </div>
+    <div class="pain-full reveal">
+      <span class="pain-icon">🤖</span>
+      <h3>No Automated System Working While You Sleep</h3>
+      <p>No high-converting funnel, no automated follow-up, no system that turns a follower into a buyer without you manually stepping in every time. Your content works hard. Your backend doesn't work at all.</p>
+    </div>
+
+    <div class="callout reveal">
+      These are not content problems. You're already showing up consistently. These are <em>monetization problems</em> — and that's exactly what I fix.
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="what-section" id="how">
+  <div class="container">
+    <p class="section-eyebrow reveal">Here's What I've Noticed</p>
+    <h2 class="section-title reveal">Every creator I've spoken to<br>knows they should be<br>making <em>more.</em></h2>
+
+    <p class="what-body reveal">That's exactly where I come in. Not just a product. Not just a landing page. <em>A complete monetization infrastructure</em> — built around your audience, your expertise, and your goals.</p>
+    <p class="what-body reveal">You don't change a thing. No extra work, no upfront investment, no steep learning curve. <strong>You keep doing what you do best — creating content. I handle everything else.</strong></p>
+
+    <div class="what-quote reveal">And I only get paid when it works.</div>
+
+    <a href="#book" class="btn-lime">Book a Free Strategy Call →</a>
+    <p class="hero-note" style="margin-top:0.8rem;">30 minutes. No pitch. Just clarity.</p>
+  </div>
+</section>
+
+<!-- FIT SECTION -->
+<section class="fit-section">
+  <div class="container-wide">
+    <div style="max-width:680px;">
+      <p class="section-eyebrow reveal">Is This For You?</p>
+      <h2 class="section-title reveal">I work with a specific type<br>of creator. <em>Here's how to<br>know you're one of them.</em></h2>
+      <p class="section-body reveal">Not every creator is the right fit — and that's okay. I'd rather be honest upfront than waste your time or mine.</p>
+    </div>
+
+    <div class="fit-grid reveal">
+      <div class="fit-col fit-good">
+        <div class="fit-col-header">✓ &nbsp; You're the right fit if…</div>
+        <h3>You Have The Audience. You're Ready To Build The Income.</h3>
+        <div class="fit-item">
+          <div class="fit-check">✓</div>
+          <div><div class="fit-item-title">20K–200K Instagram followers</div><div class="fit-item-body">Real influence, real trust — even if the income hasn't caught up yet.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✓</div>
+          <div><div class="fit-item-title">You teach something valuable</div><div class="fit-item-body">Finance, fitness, business, productivity, relationships, skills — content that genuinely helps people.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✓</div>
+          <div><div class="fit-item-title">You're serious about monetization</div><div class="fit-item-body">Not just curious — you're ready to build something real and willing to show up for it.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✓</div>
+          <div><div class="fit-item-title">Committed and dedicated</div><div class="fit-item-body">You're consistent with your content and bring that same energy to building your business.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✓</div>
+          <div><div class="fit-item-title">People already ask you for help</div><div class="fit-item-body">Your DMs have the demand. You just need the system to convert it.</div></div>
+        </div>
+      </div>
+
+      <div class="fit-divider"></div>
+
+      <div class="fit-col fit-bad">
+        <div class="fit-col-header">✕ &nbsp; This isn't for you if…</div>
+        <h3>Some Creators I Genuinely Can't Help — And I'll Say So.</h3>
+        <div class="fit-item">
+          <div class="fit-check">✕</div>
+          <div><div class="fit-item-title">Entertainment or meme pages</div><div class="fit-item-body">If your content is built on laughs and virality, there's no expertise to monetize — that's a different game entirely.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✕</div>
+          <div><div class="fit-item-title">Looking for overnight results</div><div class="fit-item-body">This is a real business being built. If you want a quick hack, I'm not your person.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✕</div>
+          <div><div class="fit-item-title">Lifestyle or aesthetic-only content</div><div class="fit-item-body">Beautiful feeds with no educational angle don't have a product waiting inside them yet.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✕</div>
+          <div><div class="fit-item-title">Not open to collaboration</div><div class="fit-item-body">This is a true partnership. If you're not comfortable sharing and building together — it won't work.</div></div>
+        </div>
+        <div class="fit-item">
+          <div class="fit-check">✕</div>
+          <div><div class="fit-item-title">Already fully monetized</div><div class="fit-item-body">If you already have a thriving product suite and funnel — great. You probably don't need me.</div></div>
+        </div>
+      </div>
+
+      <div class="fit-close">
+        If you read the left column and thought <strong>"that's me"</strong> — it probably is. The next step is a free 30-minute strategy call. No pitch. Just an honest look at what's possible.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF SECTION -->
+<section class="proof-section">
+  <div class="container">
+    <p class="section-eyebrow reveal">On Proof &amp; Results</p>
+    <h2 class="section-title reveal">You Won't See Income<br><em>Screenshots Here.</em></h2>
+
+    <div class="proof-quote reveal">
+      "Posting someone's private income to sell yourself is not a flex. It's a boundary crossed. The right numbers show up in the right room — and that room is <em>a private call.</em>"
+    </div>
+
+    <div class="proof-steps reveal">
+      <div class="proof-step">
+        <div class="proof-num">01</div>
+        <div>
+          <div class="proof-step-title">Privacy Over Promotion</div>
+          <div class="proof-step-body">A creator's income is their personal business. I will never post their results publicly without explicit consent — no matter how good the numbers look.</div>
+        </div>
+      </div>
+      <div class="proof-step">
+        <div class="proof-num">02</div>
+        <div>
+          <div class="proof-step-title">They Earn the Credit, Always</div>
+          <div class="proof-step-body">I work behind the scenes so their audience sees them grow through their own effort. I never take public credit — that would break the trust they've built with their followers.</div>
+        </div>
+      </div>
+      <div class="proof-step">
+        <div class="proof-num">03</div>
+        <div>
+          <div class="proof-step-title">Revenue Share Is the Real Proof</div>
+          <div class="proof-step-body">I only get paid when you grow. No retainers. No upfront fees. On the call — <em>I'll walk you through the full monetization system, map out your personal gameplan, and run the exact numbers on what this looks like for you specifically.</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-box reveal">
+      <div class="call-box-label">// What Happens on the Call</div>
+      <div class="call-items">
+        <div class="call-item">A live revenue projection built around your audience size</div>
+        <div class="call-item">The exact system that generates $10K+ monthly predictably</div>
+        <div class="call-item">Where we're at so far — honest context, no hype</div>
+      </div>
+      <div class="call-unlocked">↑ unlocked the moment you book a call</div>
+    </div>
+
+    <div class="proof-badges reveal">
+      <div class="proof-badge">
+        <div class="proof-badge-icon">🔒</div>
+        <div class="proof-badge-title">Full Privacy</div>
+        <div class="proof-badge-body">Your income is never shared. Not in marketing. Not anywhere.</div>
+      </div>
+      <div class="proof-badge">
+        <div class="proof-badge-icon">🏆</div>
+        <div class="proof-badge-title">You Take The Credit</div>
+        <div class="proof-badge-body">Your audience sees you winning. I stay invisible — by design.</div>
+      </div>
+      <div class="proof-badge">
+        <div class="proof-badge-icon">📊</div>
+        <div class="proof-badge-title">Paid On Results</div>
+        <div class="proof-badge-body">Revenue share only. I have skin in the game — always.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-top:1.5rem;">
+      <p style="font-size:0.92rem; color:var(--text-muted); max-width:400px;">I work with creators who value integrity as much as income. <strong style="color:var(--text);">If that's you, let's talk.</strong></p>
+      <a href="#book" class="btn-lime">See Our Results on the Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <p class="section-eyebrow reveal">FAQ</p>
+    <h2 class="section-title reveal">Questions Worth Asking<br><em>Before You Book.</em></h2>
+    <p class="section-body reveal">If something isn't covered here, I'll answer it directly on the call.</p>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What exactly do you handle — and what do I have to do?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">I build and run the entire backend: the offer design, the funnel, the email sequences, the automations, the payment setup, and the course hosting. You bring your knowledge and your audience. Your only job is to show up as yourself — the content you already create, the trust you've already built. <em>The system handles everything else.</em></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">If there's no upfront investment, how does this actually work?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You keep 80%. I take 20%. No retainers, no upfront fees, no monthly charges. I only earn when you do — which means my incentive is completely aligned with yours. <em>If it doesn't generate income, I don't get paid.</em> That structure is intentional. It keeps me accountable to results, not just effort.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I've never launched anything before. Is that a problem?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">It's honestly ideal. There's nothing to unlearn and no old setup to rebuild around. We start with a clean structure and build the offer around what your followers are already asking you for.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What kind of product will we build together?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">A masterclass or digital course built around the knowledge you're already sharing for free — the thing your audience keeps asking you to go deeper on. We figure out the exact offer on the call and price it based on your niche and the level of trust you've built with your followers.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">My following is engaged but not huge — say, 25K. Does this still work?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Size matters far less than trust. <em>A 25K audience that genuinely listens to you will outperform a 250K audience that treats you like entertainment.</em> If your followers ask for your advice, follow your recommendations, and engage with your posts — the audience is ready. That's the only metric that actually matters.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if it doesn't convert? What's my risk?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You've invested nothing upfront. If a launch doesn't perform, you've lost no money. I've lost the time, money, and resources I put into building it — the softwares, the automations, the entire backend infrastructure. That's not charity — it's how the model keeps me accountable. I don't get paid for effort. I only get paid for results.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I own everything we build?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Completely. Your audience, your brand, your product, your income. <em>I own none of it.</em> I build the infrastructure that runs behind the scenes — but the business, the relationship with your followers, and every dollar it generates belong entirely to you.</div></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3rem; padding:2.5rem; border:1px solid var(--border-soft); background:var(--bg-card);">
+      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.4rem;">Still have a question that isn't covered here?<br>I'll answer it directly — no pitch, no pressure.</p>
+      <a href="#book" class="btn-lime">Book a Free Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" id="book">
+  <div class="cta-glow"></div>
+  <h2>Your Audience Is Ready.<br>The Only Thing Missing<br>Is <em>The System.</em></h2>
+  <p>30 minutes. No pitch. Just a clear, honest look at what your audience can generate — and what it would take to get there.</p>
+  <a href="https://calendly.com/thezohanariz/revenue-roadmap" target="_blank" class="btn-lime" style="font-size:1.05rem; padding:1.2rem 3rem; position:relative; z-index:1;">Book Your Free Strategy Call →</a>
+  <p class="cta-note">No obligation · Revenue share only · You keep 80%</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="nav-dot"></div>
+    Zohan<span>Ariz</span>
+  </div>
+  <div class="footer-copy">© 2026 · Built for creators who are serious about income.</div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
