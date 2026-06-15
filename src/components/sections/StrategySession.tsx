@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
-import { supabase } from "@/lib/supabase";
+import { insertLead } from "@/app/actions";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -106,18 +106,18 @@ export default function StrategySession() {
         created_at: new Date().toISOString()
       };
 
-      // 1. Supabase insert
-      if (supabase) {
-        const dbPayload = {
-          full_name: data.fullName,
-          instagram_handle: handle,
-          followers: data.followers,
-          niche_industry: data.niche,
-          email: data.email,
-          created_at: new Date().toISOString(),
-        };
-        const { error } = await supabase.from("creator model").insert([dbPayload]);
-        if (error) console.error("Supabase error:", error);
+      // 1. Supabase insert (Secured Server Action)
+      const dbPayload = {
+        full_name: data.fullName,
+        instagram_handle: handle,
+        followers: data.followers,
+        niche_industry: data.niche,
+        email: data.email,
+        created_at: new Date().toISOString(),
+      };
+      const result = await insertLead(dbPayload);
+      if (result.error) {
+        console.error("Supabase error:", result.error);
       }
 
       // 2. n8n webhook call

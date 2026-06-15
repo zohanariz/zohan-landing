@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
-import { supabase } from "@/lib/supabase";
+import { insertLead } from "@/app/actions";
 import { Check } from "lucide-react";
 
 import {
@@ -62,20 +62,18 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       const handle = data.instagram.startsWith("@") ? data.instagram : `@${data.instagram}`;
       const payload = { ...data, instagram: handle, created_at: new Date().toISOString() };
 
-      // 1. Supabase Insertion
-      if (supabase) {
-        const dbPayload = {
-          full_name: data.fullName,
-          instagram_handle: handle,
-          followers: data.followers,
-          niche_industry: data.niche,
-          email: data.email,
-          created_at: new Date().toISOString(),
-        };
-        const { error } = await supabase.from("creator model").insert([dbPayload]);
-        if (error) console.error("Supabase insert error:", error);
-      } else {
-        console.warn("Supabase not configured. Storing locally in console.");
+      // 1. Supabase Insertion (Secured Server Action)
+      const dbPayload = {
+        full_name: data.fullName,
+        instagram_handle: handle,
+        followers: data.followers,
+        niche_industry: data.niche,
+        email: data.email,
+        created_at: new Date().toISOString(),
+      };
+      const result = await insertLead(dbPayload);
+      if (result.error) {
+        console.error("Supabase insert error:", result.error);
       }
 
       // 2. n8n Webhook triggering
