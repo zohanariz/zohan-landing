@@ -64,7 +64,15 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
       // 1. Supabase Insertion
       if (supabase) {
-        const { error } = await supabase.from("creator model").insert([payload]);
+        const dbPayload = {
+          full_name: data.fullName,
+          instagram_handle: handle,
+          followers: data.followers,
+          niche_industry: data.niche,
+          email: data.email,
+          created_at: new Date().toISOString(),
+        };
+        const { error } = await supabase.from("creator model").insert([dbPayload]);
         if (error) console.error("Supabase insert error:", error);
       } else {
         console.warn("Supabase not configured. Storing locally in console.");
@@ -221,7 +229,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 className="w-full h-12 bg-gold hover:bg-gold2 text-black font-sans font-semibold text-xs tracking-wider py-3 rounded-none transition-all duration-200 mt-2 cursor-pointer shadow-md uppercase"
                 disabled={loading}
               >
-                {loading ? "Submitting Request..." : "Request Call Now →"}
+                {loading ? "Submitting..." : "Pick a time"}
               </Button>
 
               <p className="text-[10px] text-muted text-center tracking-widest uppercase font-mono pt-1">
