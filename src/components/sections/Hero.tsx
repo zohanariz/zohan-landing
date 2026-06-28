@@ -192,12 +192,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         {/* Title */}
         <h1 className="hero-anim font-outfit text-white text-[26px] sm:text-[32px] md:text-[38px] lg:text-[46px] xl:text-[52px] font-black leading-[1.15] tracking-wide [word-spacing:0.14em] uppercase max-w-none mb-6">
-          You've Built the <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case">Audience.</span><br />Now Let's Build <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case">Predictable Monthly Income.</span>
+          You've Built the Audience.<br />Now Let's Build <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case">Predictable Monthly Income.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="hero-anim font-sans italic text-sm sm:text-base md:text-lg leading-[1.65] text-[#F0ECE3]/80 max-w-[760px] mb-10">
-          I help Instagram creators between <strong className="text-white font-bold">20K–200K followers</strong> make <strong className="text-white font-bold">$3K - $11K+ predictable monthly income</strong> beyond sponsorships and affiliates in <strong className="text-white font-bold">less than 27 days</strong> — <strong className="text-white font-bold">without any upfront investment</strong> or added effort.
+          I help Instagram creators between <strong className="text-white font-bold">20k-200k followers</strong> build a <strong className="text-white font-bold">scalable, digital product</strong> and add <strong className="text-white font-bold">$3k-$11k+ in predictable monthly profit</strong> — <strong className="text-white font-bold">without any upfront investment</strong> or added effort.
         </p>
 
         {/* VSL Video Player Box */}

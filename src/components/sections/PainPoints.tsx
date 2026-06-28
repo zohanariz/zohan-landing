@@ -239,15 +239,10 @@ export default function PainPoints() {
         
         {/* Header Trigger */}
         <div className="pain-trigger-header mb-14 text-left">
-          <div className="pain-header-reveal s-tag mb-4">
-            Sound familiar?
-          </div>
-           <h2 className="pain-header-reveal font-outfit text-[22px] sm:text-[26px] md:text-[32px] lg:text-[38px] font-extrabold tracking-wide [word-spacing:0.16em] text-white mb-4 leading-[1.15] uppercase max-w-none">
-            Most creators I talk to have 2 or 3 of these.<br /> <span className="text-gold">A few have all <span className="font-outfit italic font-light normal-case">7.</span></span>
+          <h2 className="pain-header-reveal font-outfit text-[24px] sm:text-[28px] md:text-[36px] lg:text-[44px] font-extrabold tracking-wide [word-spacing:0.16em] text-white mb-4 leading-[1.15] uppercase max-w-none">
+            HOW MANY PAIN POINTS DO YOU HAVE?<br />
+            <span className="text-gold">A few have all <span className="font-outfit italic font-light normal-case">7.</span></span>
           </h2>
-          <p className="pain-header-reveal text-sm md:text-[15px] text-muted leading-relaxed max-w-[500px]">
-            Read through and count yours — then we'll know exactly where to start.
-          </p>
         </div>
 
         {/* Grid Items Trigger */}
@@ -308,12 +303,7 @@ export default function PainPoints() {
             </div>
           </div>
 
-          {/* Value Callout Banner */}
-          <div className="pain-card-reveal mt-10 p-[28px] md:p-[36px] bg-dark4 border-l-3 border-gold text-left">
-            <p className="text-[15px] leading-[1.7] text-[#F0ECE3]/75">
-              <strong className="text-white font-semibold">These are not content problems.</strong> You're already showing up consistently. These are monetization problems — and that's exactly what I fix.
-            </p>
-          </div>
+
         </div>
 
       </div>

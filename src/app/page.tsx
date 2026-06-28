@@ -56,7 +56,7 @@ export default function Home() {
         <Hero onOpenBooking={openBooking} />
         <PainPoints />
         <WhatWeDo onOpenBooking={openBooking} />
-        <FitTest />
+        <FitTest onOpenBooking={openBooking} />
         <Proof onOpenBooking={openBooking} />
         <Faq onOpenBooking={openBooking} />
         <FinalCta onOpenBooking={openBooking} />
