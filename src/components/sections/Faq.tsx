@@ -101,7 +101,7 @@ export default function Faq({ onOpenBooking }: FaqProps) {
   ];
 
   return (
-    <section id="faq" ref={containerRef} className="w-full py-24 bg-dark2 border-t border-white/6 relative text-left">
+    <section id="faq" ref={containerRef} className="w-full pt-24 pb-12 bg-dark2 border-t border-white/6 relative text-left">
       <div className="container max-w-4xl mx-auto px-6 md:px-16">
         
         <div className="faq-reveal s-tag mb-4">
@@ -116,7 +116,7 @@ export default function Faq({ onOpenBooking }: FaqProps) {
         </p>
 
         {/* Customized Accordion */}
-        <div className="faq-reveal faq-list border-t border-white/6 mb-16">
+        <div className="faq-reveal faq-list border-t border-white/6 mb-8">
           <Accordion className="w-full">
             {faqs.map((faq, idx) => (
               <AccordionItem

@@ -39,7 +39,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
     <section
       id="cta"
       ref={containerRef}
-      className="relative w-full pt-48 pb-36 bg-dark text-center overflow-hidden px-6"
+      className="relative w-full pt-20 pb-24 bg-dark text-center overflow-hidden px-6"
     >
       {/* Background Radial Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_55%_at_50%_50%,rgba(16,185,129,0.04),transparent)] pointer-events-none"></div>
