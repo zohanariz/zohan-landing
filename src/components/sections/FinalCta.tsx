@@ -53,23 +53,23 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
         </div>
 
         <h2 className="font-outfit text-[24px] sm:text-[28px] md:text-[38px] lg:text-[46px] font-extrabold text-white tracking-wide [word-spacing:0.16em] leading-[1.15] max-w-[900px] mb-6 uppercase">
-          Ready to turn your audience<br className="hidden sm:inline" /> into <span className="font-outfit italic font-extrabold text-gold normal-case">predictable revenue?</span>
+          Ready to turn your audience<br className="hidden sm:inline" /> into <em className="font-outfit italic font-extrabold text-gold normal-case">predictable income?</em>
         </h2>
         
         <p className="text-sm md:text-base text-muted leading-[1.75] max-w-[480px] mb-12 font-light">
-          30 minutes. No pitch. Just a clear, honest look at what your audience can generate — and what it would take to get there.
+          15 minutes. Live revenue projection built around your audience. No pitch. Just an honest look at what's possible.
         </p>
 
         <div className="flex flex-col items-center gap-3.5">
           <BookingButton
             onClick={onOpenBooking}
-            variant="pill"
-            className="bg-gold hover:bg-gold2 text-black font-sans font-bold text-[16px] sm:text-[20px] py-3.5 px-8 sm:py-4.5 sm:px-14 rounded-full shadow-lg hover:shadow-xl uppercase tracking-wide animate-cta-pulse"
+            variant="cut"
+            className="btn-gold text-[15px] px-[52px] py-[20px]"
           >
-            Book a Free Discovery Call
+            Book a Discovery Call →
           </BookingButton>
           <p className="text-[13px] text-white font-semibold italic">
-            No obligation · Revenue share only · You keep 80%
+            No pitch. No pressure. No obligation.
           </p>
         </div>
 

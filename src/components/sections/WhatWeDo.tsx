@@ -117,63 +117,64 @@ export default function WhatWeDo({ onOpenBooking }: WhatWeDoProps) {
       <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col items-center relative z-10">
         {/* Tag */}
         <div className="position-reveal s-tag justify-center mb-6">
-          ROADMAP
+          Here's What I've Noticed
         </div>
 
-        <h2 className="position-reveal font-outfit text-[24px] sm:text-[28px] md:text-[36px] lg:text-[44px] font-extrabold tracking-wide [word-spacing:0.16em] text-white leading-[1.2] max-w-[1100px] mx-auto mb-4 uppercase">
-          Ready to build your predictable <span className="text-gold">monetization engine?</span>
+        <h2 className="position-reveal font-outfit text-[24px] sm:text-[28px] md:text-[36px] lg:text-[44px] font-extrabold tracking-wide [word-spacing:0.16em] text-white leading-[1.2] max-w-[1100px] mx-auto mb-7 uppercase">
+          Every creator I've spoken to knows they should be making more.<br className="hidden sm:inline" /> They just don't know <em className="font-outfit italic font-light text-gold normal-case">where to start.</em>
         </h2>
-        <p className="position-reveal text-sm md:text-base text-muted font-light max-w-xl leading-relaxed mb-12">
-          Here's how we'll do it in less than <strong className="text-white font-semibold">27 days</strong>:
-        </p>
 
-        {/* Split Section Grid replaced by Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
-          {/* Step 1 */}
-          <div className="position-reveal group relative p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300">
-            <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col justify-start transition-colors duration-300 group-hover:bg-dark4">
-              <span className="font-serif text-[42px] font-black text-gold opacity-30 leading-none mb-4 select-none">01</span>
-              <h3 className="font-sans text-[16px] font-bold text-white mb-3 uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
-                1. Design Your Offer
-              </h3>
-              <p className="text-[13px] text-muted leading-[1.75] font-light">
-                We figure out the exact high-ticket offer your followers are already asking for. No guessing, no testing — we build what they will buy.
+        {/* Gold Bar Divider */}
+        <div className="position-reveal gold-bar mx-auto my-8"></div>
+
+        {/* Split Section Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center w-full mt-10 text-left">
+          {/* Left: Premium Portrait Card */}
+          <div className="position-reveal relative w-full max-w-[280px] md:max-w-[310px] aspect-[3.2/4] mx-auto rounded-[24px] overflow-hidden border border-white/6 bg-gradient-to-t from-[#081508]/40 via-[#161616] to-[#0D0D0D] shadow-2xl flex items-end justify-center group">
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_70%,rgba(124,255,77,0.08),transparent_60%)] z-0" />
+            
+            {/* Zohan's cutout portrait */}
+            <img
+              src="/zohan.png"
+              alt="Zohan Ariz"
+              className="relative z-10 w-full h-[95%] object-contain object-bottom scale-100 group-hover:scale-[1.02] transition-transform duration-500"
+            />
+            
+            {/* Bottom shadow fade to blend the cutout bottom border */}
+            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#161616] via-[#161616]/70 to-transparent z-20" />
+          </div>
+
+          {/* Right: Content details */}
+          <div className="flex flex-col items-start text-left max-w-[540px]">
+            {/* Body Text */}
+            <p className="position-reveal text-[#F0ECE3]/65 text-base leading-[1.85] mb-5 font-light">
+              That's exactly where I come in. Not just a product. Not just a landing page. <strong className="text-gold font-medium">A complete monetization infrastructure</strong> — built around your audience, your expertise, and your goals.
+            </p>
+
+            <p className="position-reveal text-[#F0ECE3]/65 text-base leading-[1.85] mb-7 font-light">
+              You don't change a thing. No extra work, no upfront investment, no steep learning curve. <strong className="text-white font-semibold">You keep doing what you do best — creating content. I handle everything else.</strong>
+            </p>
+
+            {/* Kicker */}
+            <em className="position-reveal font-outfit text-[22px] italic font-light text-gold mb-8 block select-none">
+              And I only get paid when it works.
+            </em>
+
+            {/* Button & Subtext */}
+            <div className="position-reveal flex flex-col items-start gap-2.5">
+              <BookingButton
+                onClick={onOpenBooking}
+                variant="cut"
+                className="btn-gold px-11 py-5 text-[15px]"
+              >
+                Book a Free Strategy Call →
+              </BookingButton>
+              <p className="text-[14px] text-white/50 italic font-sans pl-1">
+                15 minutes. No pitch. Just clarity.
               </p>
             </div>
           </div>
-
-          {/* Step 2 */}
-          <div className="position-reveal group relative p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300">
-            <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col justify-start transition-colors duration-300 group-hover:bg-dark4">
-              <span className="font-serif text-[42px] font-black text-gold opacity-30 leading-none mb-4 select-none">02</span>
-              <h3 className="font-sans text-[16px] font-bold text-white mb-3 uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
-                2. Build Your Funnel
-              </h3>
-              <p className="text-[13px] text-muted leading-[1.75] font-light">
-                We build the high-converting system that runs behind the scenes: the landing page, the emails, the payment portals, and the hosting.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="position-reveal group relative p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300">
-            <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col justify-start transition-colors duration-300 group-hover:bg-dark4">
-              <span className="font-serif text-[42px] font-black text-gold opacity-30 leading-none mb-4 select-none">03</span>
-              <h3 className="font-sans text-[16px] font-bold text-white mb-3 uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
-                3. Launch & Scale
-              </h3>
-              <p className="text-[13px] text-muted leading-[1.75] font-light">
-                We launch it to your audience. No sleazy sales pitches, no pressure. Just a clean launch that adds $3K - $11K+ in predictable profit.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Value Callout Banner moved from PainPoints */}
-        <div className="position-reveal mt-12 p-[28px] md:p-[36px] bg-dark4 border-l-3 border-gold text-left w-full">
-          <p className="text-[15px] leading-[1.7] text-[#F0ECE3]/75">
-            <strong className="text-white font-semibold">These are not content problems.</strong> You're already showing up consistently. These are monetization problems — and that's exactly what I fix.
-          </p>
         </div>
       </div>
     </section>
