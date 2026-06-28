@@ -151,8 +151,8 @@ export default function FitTest() {
 
         {/* Highlighted statement: Big, Bold, Non-Skimmable, Outfit font, "that's me" in Green */}
         <div className="fit-header-reveal text-center max-w-3xl mx-auto mt-16 px-4">
-          <p className="font-outfit text-base sm:text-lg md:text-xl font-extrabold text-white leading-relaxed">
-            If you read the left column and thought <span className="text-gold font-black">"that's me"</span> it probably is.<br className="hidden sm:inline" />
+          <p className="font-cursive text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed tracking-wide">
+            If you read the left column and thought <span className="text-gold">"that's me"</span> it probably is.<br className="hidden sm:inline" />
             The next step is a free 15-minute strategy call. No pitch. Just an honest look at what's possible.
           </p>
         </div>
