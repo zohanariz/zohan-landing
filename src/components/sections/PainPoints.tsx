@@ -285,8 +285,11 @@ export default function PainPoints() {
            <h2 className="pain-header-reveal font-outfit text-[22px] sm:text-[26px] md:text-[32px] lg:text-[38px] font-extrabold tracking-wide [word-spacing:0.16em] text-white mb-4 leading-[1.15] uppercase max-w-none">
             Most creators I talk to have 2 or 3 of these.<br /> <span className="text-red-500">A few have all <span className="font-outfit italic font-light normal-case">8.</span></span>
           </h2>
-          <p className="pain-header-reveal text-sm md:text-[15px] text-muted leading-relaxed max-w-[500px]">
+          <p className="pain-header-reveal text-sm md:text-[15px] text-muted leading-relaxed max-w-[500px] mb-3">
             Read through and count yours.
+          </p>
+          <p className="pain-header-reveal text-sm md:text-[15px] text-red-500 italic font-light">
+            Psst... Most creators have 2–3. If you have all 8, we should talk.
           </p>
         </div>
 
@@ -322,12 +325,6 @@ export default function PainPoints() {
             </p>
           </div>
 
-          {/* Psst... Line */}
-          <div className="pain-card-reveal text-center mt-12 mb-4">
-            <p className="text-sm md:text-[15px] text-red-500 italic font-light">
-              Psst... Most creators have 2–3. If you have all 8, we should talk.
-            </p>
-          </div>
         </div>
 
       </div>
