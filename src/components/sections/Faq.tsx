@@ -43,10 +43,10 @@ export default function Faq({ onOpenBooking }: FaqProps) {
 
   const faqs = [
     {
-      q: "What exactly do you handle — and what do I have to do?",
+      q: "What exactly do you handle and what do I have to do?",
       a: (
         <>
-          I build and run the entire backend: the offer design, the funnel, the email sequences, the automations, the payment setup, and the course hosting. You bring your knowledge and your audience. Your only job is to show up as yourself — the content you already create, the trust you've already built. <strong className="text-gold font-semibold">The system handles everything else.</strong>
+          I build and run the entire backend: the offer design, the funnel, the email sequences, the automations, the payment setup, and the course hosting. You bring your knowledge and your audience. Your only job is to show up as yourself, the content you already create, the trust you've already built. <strong className="text-gold font-semibold">The system handles everything else.</strong>
         </>
       )
     },
@@ -54,7 +54,7 @@ export default function Faq({ onOpenBooking }: FaqProps) {
       q: "If there's no upfront investment, how does this actually work?",
       a: (
         <>
-          You keep 80%. I take 20%. No retainers, no upfront fees, no monthly charges. I only earn when you do — which means my incentive is completely aligned with yours. <strong className="text-gold font-semibold">If it doesn't generate income, I don't get paid.</strong> That structure is intentional. It keeps me accountable to results, not just effort.
+          You keep 80%. I take 20%. No retainers, no upfront fees, no monthly charges. I only earn when you do, which means my incentive is completely aligned with yours. <strong className="text-gold font-semibold">If it doesn't generate income, I don't get paid.</strong> That structure is intentional. It keeps me accountable to results, not just effort.
         </>
       )
     },
@@ -70,15 +70,15 @@ export default function Faq({ onOpenBooking }: FaqProps) {
       q: "What kind of product will we build together?",
       a: (
         <>
-          Masterclass or a digital course built around the knowledge you're already sharing for free — the thing your audience keeps asking you to go deeper on. We figure out the exact offer on the call and price it based on your niche and the level of trust you've built with your followers.
+          Masterclass or a digital course built around the knowledge you're already sharing for free, the thing your audience keeps asking you to go deeper on. We figure out the exact offer on the call and price it based on your niche and the level of trust you've built with your followers.
         </>
       )
     },
     {
-      q: "My following is engaged but not huge — say, 25K. Does this still work?",
+      q: "My following is engaged but not huge, say, 25K. Does this still work?",
       a: (
         <>
-          Yes. Size matters far less than trust. <strong className="text-gold font-semibold">A 25K audience that genuinely listens to you will outperform a 250K audience that treats you like entertainment.</strong> If your followers ask for your advice, follow your recommendations, and engage with your posts — the audience is ready. That's the only metric that actually matters.
+          Yes. Size matters far less than trust. <strong className="text-gold font-semibold">A 25K audience that genuinely listens to you will outperform a 250K audience that treats you like entertainment.</strong> If your followers ask for your advice, follow your recommendations, and engage with your posts, the audience is ready. That's the only metric that actually matters.
         </>
       )
     },
@@ -86,7 +86,7 @@ export default function Faq({ onOpenBooking }: FaqProps) {
       q: "What if it doesn't convert? What's my risk?",
       a: (
         <>
-          You've invested nothing upfront. If a launch doesn't perform, you've lost no money — <strong className="text-gold font-semibold">I've lost the time, money, and resources I put into building it</strong> — the softwares, the automations, the entire backend infrastructure. That's not charity — it's how the model keeps me accountable. I don't get paid for effort. I only get paid for results.
+          You've invested nothing upfront. If a launch doesn't perform, you've lost no money. <strong className="text-gold font-semibold">I've lost the time, money, and resources I put into building it</strong>, including the softwares, the automations, and the entire backend infrastructure. That's not charity, it's how the model keeps me accountable. I don't get paid for effort. I only get paid for results.
         </>
       )
     },
@@ -94,7 +94,7 @@ export default function Faq({ onOpenBooking }: FaqProps) {
       q: "Do I own everything we build?",
       a: (
         <>
-          Completely. Your audience, your brand, your product, your income. <strong className="text-gold font-semibold">I own none of it.</strong> I build the infrastructure that runs behind the scenes — but the business, the relationship with your followers, and every dollar it generates belong entirely to you.
+          Completely. Your audience, your brand, your product, your income. <strong className="text-gold font-semibold">I own none of it.</strong> I build the infrastructure that runs behind the scenes, but the business, the relationship with your followers, and every dollar it generates belong entirely to you.
         </>
       )
     }

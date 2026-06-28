@@ -141,7 +141,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
 
         {/* Blockquote */}
         <div className="proof-reveal border-l-3 border-gold bg-dark3 p-8 my-10 font-serif text-[17px] italic leading-[1.7] text-[#F0ECE3]/80">
-          "Posting someone's private income to sell yourself is not a flex. It's a boundary crossed. The right numbers show up in the right room — and that room is <strong className="text-gold font-normal not-italic">a private call.</strong>"
+          "Posting someone's private income to sell yourself is not a flex. It's a boundary crossed. The right numbers show up in the right room and that room is <strong className="text-gold font-normal not-italic">a private call.</strong>"
         </div>
 
         {/* Numbered Proof Items */}
@@ -153,7 +153,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             <div>
               <h3 className="font-sans text-[17px] font-semibold text-white mb-2 uppercase">Privacy over promotion</h3>
               <p className="text-sm text-muted leading-[1.75] font-light">
-                A creator's income is their personal business. I will never post their results publicly without explicit consent — no matter how good the numbers look.
+                A creator's income is their personal business. I will never post their results publicly without explicit consent, no matter how good the numbers look.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             <div>
               <h3 className="font-sans text-[17px] font-semibold text-white mb-2 uppercase">They earn the credit, always</h3>
               <p className="text-sm text-muted leading-[1.75] font-light">
-                I work behind the scenes so their audience sees them grow through their own effort. I never take public credit — that would break the trust they've built with their followers.
+                I work behind the scenes so their audience sees them grow through their own effort. I never take public credit, as that would break the trust they've built with their followers.
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             <div>
               <h3 className="font-sans text-[17px] font-semibold text-white mb-2 uppercase">Revenue share is the real proof</h3>
               <p className="text-sm text-muted leading-[1.75] font-light">
-                I only get paid when you grow. No retainers. No upfront fees. And on the call — I'll walk you through the full monetization system, <strong className="text-gold font-semibold">map out your personal gameplan, and run the exact numbers on what this looks like for you specifically.</strong>
+                I only get paid when you grow. No retainers. No upfront fees. And on the call, I'll walk you through the full monetization system, <strong className="text-gold font-semibold">map out your personal gameplan, and run the exact numbers on what this looks like for you specifically.</strong>
               </p>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
               </li>
               <li className="flex gap-3 text-sm leading-[1.65] text-[#F0ECE3]/75 font-light items-start">
                 <Lock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <span>Where we're at so far — honest context, no hype</span>
+                <span>Where we're at so far, honest context, no hype</span>
               </li>
             </ul>
 
@@ -228,7 +228,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
               <span className="text-[28px] text-gold mb-3 block">👤</span>
               <h4 className="text-sm font-semibold text-white uppercase mb-2">You take the credit</h4>
               <p className="text-xs text-muted leading-[1.65]">
-                Your audience sees you winning. I stay invisible — <strong className="text-[#F0ECE3]/60 font-semibold">by design.</strong>
+                Your audience sees you winning. I stay invisible <strong className="text-[#F0ECE3]/60 font-semibold">by design.</strong>
               </p>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function Proof({ onOpenBooking }: ProofProps) {
               <span className="text-[28px] text-gold mb-3 block">📈</span>
               <h4 className="text-sm font-semibold text-white uppercase mb-2">Paid on results</h4>
               <p className="text-xs text-muted leading-[1.65]">
-                Revenue share only. I have skin in the game — <strong className="text-[#F0ECE3]/60 font-semibold">always.</strong>
+                Revenue share only. I have skin in the game, <strong className="text-[#F0ECE3]/60 font-semibold">always.</strong>
               </p>
             </div>
           </div>
@@ -258,9 +258,6 @@ export default function Proof({ onOpenBooking }: ProofProps) {
             >
               See Our Results on the Call →
             </BookingButton>
-            <p className="text-[12px] text-white font-semibold italic pl-1">
-              No pitch. No pressure.
-            </p>
           </div>
         </div>
 

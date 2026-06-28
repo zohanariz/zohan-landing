@@ -85,9 +85,20 @@ export default function PainPoints() {
       desc: "Some months are great, some are slow, and you never really know what's coming. You can't plan, save, or grow when your income has no consistency."
     },
     {
+      icon: (
+        <svg className="w-[28px] h-[28px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="28" y1="78" x2="68" y2="24" stroke="#F9BC05" strokeWidth="18" strokeLinecap="round" />
+          <line x1="56" y1="84" x2="83" y2="48" stroke="#4285F4" strokeWidth="18" strokeLinecap="round" />
+          <circle cx="28" cy="78" r="9" fill="#34A853" />
+        </svg>
+      ),
+      title: "Need income beyond Adsense",
+      desc: "AdSense can't be your business. AdSense rewards views, not expertise. Your expertise deserves more than ad revenue."
+    },
+    {
       icon: "💸",
-      title: "Need revenue beyond sponsorships",
-      desc: "You know brand deals can't be your only income forever. You want something you own, something that compounds — you just haven't built it yet."
+      title: "Need income beyond sponsorships",
+      desc: "You know brand deals can't be your only income forever. You want something you own, something that compounds, you just haven't built it yet."
     },
     {
       icon: (
@@ -118,12 +129,12 @@ export default function PainPoints() {
         </svg>
       ),
       title: "Affiliate income isn't enough",
-      desc: "You share links, a few people click, and the commission barely adds up. It works as a nice bonus — not as a real income stream you can count on."
+      desc: "You share links, a few people click, and the commission barely adds up. It works as a nice bonus, not as a real income stream you can count on."
     },
     {
       icon: "👥",
       title: "Followers already ask for help",
-      desc: "People DM you for advice, recommendations, and guidance every day. The demand is already there — you just don't have a way to monetize it yet."
+      desc: "People DM you for advice, recommendations, and guidance every day. The demand is already there, you just don't have a way to monetize it yet."
     },
     {
       icon: (
@@ -172,12 +183,41 @@ export default function PainPoints() {
         </svg>
       ),
       title: "Trapped in the low-ticket cycle",
-      desc: "Ebooks at $29, PDFs at $17, tracking sheets for $15. You'd need thousands of sales every month just to hit decent income. Low-ticket offers keep you busy — they don't build real wealth."
+      desc: "Ebooks at $29, PDFs at $17, tracking sheets for $15. You'd need thousands of sales every month just to hit decent income. Low-ticket offers keep you busy, they don't build real wealth."
     },
     {
       icon: "❓",
       title: "No clear product or launch plan",
-      desc: "You have an audience that trusts you but nothing of your own to offer them. And even when you think about creating something, you don't know what they'd actually pay for — or where to begin."
+      desc: "You have an audience that trusts you but nothing of your own to offer them. And even when you think about creating something, you don't know what they'd actually pay for or where to begin."
+    },
+    {
+      icon: (
+        <svg className="w-[28px] h-[28px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Gear body circle */}
+          <circle cx="50" cy="50" r="34" stroke="currentColor" strokeWidth="6.5" className="text-gold/90" />
+          {/* Teeth */}
+          <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
+          <rect x="45" y="78" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
+          <rect x="10" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
+          <rect x="78" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
+          <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(45 50 50)" />
+          <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(135 50 50)" />
+          <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(225 50 50)" />
+          <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(315 50 50)" />
+          
+          {/* Circuit tracks */}
+          <path d="M 28 62 L 38 52 L 38 38 L 46 30" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+          <circle cx="46" cy="30" r="4.5" fill="currentColor" className="text-gold" />
+
+          <path d="M 32 68 L 58 42" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+          <circle cx="58" cy="42" r="4.5" fill="currentColor" className="text-gold" />
+
+          <path d="M 38 74 L 48 64 L 58 64 L 66 56" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
+          <circle cx="66" cy="56" r="4.5" fill="currentColor" className="text-gold" />
+        </svg>
+      ),
+      title: "No automated system working while you sleep",
+      desc: "No high-converting funnel, no automated follow-up, no system that turns a follower into a buyer without you manually stepping in every time. Your content works hard. Your business doesn't work at all."
     }
   ];
 
@@ -243,20 +283,22 @@ export default function PainPoints() {
             Sound familiar?
           </div>
            <h2 className="pain-header-reveal font-outfit text-[22px] sm:text-[26px] md:text-[32px] lg:text-[38px] font-extrabold tracking-wide [word-spacing:0.16em] text-white mb-4 leading-[1.15] uppercase max-w-none">
-            Most creators I talk to have 2 or 3 of these.<br /> <span className="text-gold">A few have all <span className="font-outfit italic font-light normal-case">7.</span></span>
+            Most creators I talk to have 2 or 3 of these.<br /> <span className="text-red-500">A few have all <span className="font-outfit italic font-light normal-case">8.</span></span>
           </h2>
           <p className="pain-header-reveal text-sm md:text-[15px] text-muted leading-relaxed max-w-[500px]">
-            Read through and count yours — then we'll know exactly where to start.
+            Read through and count yours.
           </p>
         </div>
 
         {/* Grid Items Trigger */}
         <div className="pain-trigger-grid">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
             {painPoints.map((item, idx) => (
               <div
                 key={idx}
-                className="pain-card-reveal group relative p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300"
+                className={`pain-card-reveal group relative p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300 col-span-1 sm:col-span-1 lg:col-span-2 ${
+                  idx === 6 ? "lg:col-start-2" : ""
+                }`}
               >
                 <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col items-start text-left transition-colors duration-300 group-hover:bg-dark4">
                   <div className="text-[22px] mb-4 opacity-80 select-none">
@@ -269,49 +311,21 @@ export default function PainPoints() {
                 </div>
               </div>
             ))}
-            
-            {/* Full Width Pain Point #7 */}
-            <div className="pain-card-reveal group relative sm:col-span-2 lg:col-span-3 p-[1px] rounded-[24px] bg-gradient-to-br from-emerald-500/25 via-gold/20 to-emerald-500/5 hover:from-emerald-500/50 hover:via-gold/45 hover:to-emerald-500/10 transition-all duration-300">
-              <div className="h-full bg-dark3 p-6 sm:p-8 md:p-9 rounded-[23px] flex flex-col items-start text-left transition-colors duration-300 group-hover:bg-dark4">
-                <div className="text-[22px] mb-4 opacity-80 select-none">
-                  <svg className="w-[28px] h-[28px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Gear body circle */}
-                    <circle cx="50" cy="50" r="34" stroke="currentColor" strokeWidth="6.5" className="text-gold/90" />
-                    {/* Teeth */}
-                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
-                    <rect x="45" y="78" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" />
-                    <rect x="10" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
-                    <rect x="78" y="45" width="12" height="10" rx="2" fill="currentColor" className="text-gold/90" />
-                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(45 50 50)" />
-                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(135 50 50)" />
-                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(225 50 50)" />
-                    <rect x="45" y="10" width="10" height="12" rx="2" fill="currentColor" className="text-gold/90" transform="rotate(315 50 50)" />
-                    
-                    {/* Circuit tracks */}
-                    <path d="M 28 62 L 38 52 L 38 38 L 46 30" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
-                    <circle cx="46" cy="30" r="4.5" fill="currentColor" className="text-gold" />
 
-                    <path d="M 32 68 L 58 42" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
-                    <circle cx="58" cy="42" r="4.5" fill="currentColor" className="text-gold" />
-
-                    <path d="M 38 74 L 48 64 L 58 64 L 66 56" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold" />
-                    <circle cx="66" cy="56" r="4.5" fill="currentColor" className="text-gold" />
-                  </svg>
-                </div>
-                <h3 className="font-sans text-[16px] font-semibold text-white mb-2.5 transition-colors duration-300 group-hover:text-gold">
-                  No automated system working while you sleep
-                </h3>
-                <p className="text-[13px] text-muted leading-[1.75] font-light">
-                  No high-converting funnel, no automated follow-up, no system that turns a follower into a buyer without you manually stepping in every time. Your content works hard. Your business doesn't work at all.
-                </p>
-              </div>
-            </div>
           </div>
 
-          {/* Value Callout Banner */}
-          <div className="pain-card-reveal mt-10 p-[28px] md:p-[36px] bg-dark4 border-l-3 border-gold text-left">
-            <p className="text-[15px] leading-[1.7] text-[#F0ECE3]/75">
-              <strong className="text-white font-semibold">These are not content problems.</strong> You're already showing up consistently. These are monetization problems — and that's exactly what I fix.
+          {/* Value Callout Banner (Centered, Bold, Two Lines, font-outfit) */}
+          <div className="pain-card-reveal mt-16 max-w-4xl mx-auto text-center">
+            <p className="font-outfit text-base sm:text-lg md:text-xl font-extrabold text-white leading-relaxed">
+              These are not content problems. You're already showing up consistently.<br className="hidden sm:inline" />
+              <span className="text-gold">These are monetization problems and that's exactly what I fix.</span>
+            </p>
+          </div>
+
+          {/* Psst... Line */}
+          <div className="pain-card-reveal text-center mt-12 mb-4">
+            <p className="text-sm md:text-[15px] text-red-500 italic font-light">
+              Psst... Most creators have 2–3. If you have all 8, we should talk.
             </p>
           </div>
         </div>

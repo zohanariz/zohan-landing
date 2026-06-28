@@ -192,7 +192,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         {/* Title */}
         <h1 className="hero-anim font-outfit text-white text-[26px] sm:text-[32px] md:text-[38px] lg:text-[46px] xl:text-[52px] font-black leading-[1.15] tracking-wide [word-spacing:0.14em] uppercase max-w-none mb-6">
-          You've Built the <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Audience.</span><br />Now Let's Build <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Predictable Monthly Income.</span>
+          You've Built the <span className="font-outfit italic font-black text-gold normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Audience.</span><br />Now Let's Build <span className="font-outfit italic font-black text-gold normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Predictable Monthly Income.</span>
         </h1>
 
         {/* Subtitle */}

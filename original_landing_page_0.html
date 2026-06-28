@@ -213,6 +213,17 @@
     border: 1px solid var(--border-soft);
     margin-bottom: 1px;
   }
+  @media (min-width: 900px) {
+    .pain-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .pain-grid .pain-card {
+      grid-column: span 2;
+    }
+    .pain-grid .pain-card:nth-child(7) {
+      grid-column-start: 2;
+    }
+  }
   .pain-card {
     background: var(--bg-card);
     padding: 1.8rem;
@@ -494,7 +505,7 @@
   <div class="container">
     <div class="hero-eyebrow reveal">For Instagram Creators · 20K–200K Followers</div>
     <h1 class="hero-title reveal">
-      You've Built<br>The Audience.<br>Now Build<br><em>Recurring Income.</em>
+      You've Built The <em>Audience.</em><br>Now Let's Build <em>Predictable Monthly Income.</em>
     </h1>
     <p class="hero-sub reveal">
       I help Instagram creators make <strong>$10K+ per month</strong> from their own digital products — without sponsorships, affiliates, extra work, or upfront investment. In less than <strong>45 days.</strong>
@@ -537,8 +548,8 @@
 <section class="pain-section">
   <div class="container">
     <p class="section-eyebrow reveal">Sound Familiar?</p>
-    <h2 class="section-title reveal">Most creators I talk to have<br>2 or 3 of these. <em>A few have all 7.</em></h2>
-    <p class="pain-intro reveal">Read through and count yours — then we'll know exactly where to start.</p>
+    <h2 class="section-title reveal">Most creators I talk to have<br>2 or 3 of these. <em style="color: var(--red);">A few have all 8.</em></h2>
+    <p class="pain-intro reveal">Read through and count yours.</p>
 
     <div class="pain-grid reveal">
       <div class="pain-card">
@@ -547,39 +558,59 @@
         <p>Some months are great, some are slow, and you never really know what's coming. You can't plan, save, or grow when your income has no consistency.</p>
       </div>
       <div class="pain-card">
+        <span class="pain-icon">
+          <svg style="width: 24px; height: 24px; vertical-align: middle; display: block;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="28" y1="78" x2="68" y2="24" stroke="#F9BC05" strokeWidth="18" strokeLinecap="round" />
+            <line x1="56" y1="84" x2="83" y2="48" stroke="#4285F4" strokeWidth="18" strokeLinecap="round" />
+            <circle cx="28" cy="78" r="9" fill="#34A853" />
+          </svg>
+        </span>
+        <h3>Need Income Beyond Adsense</h3>
+        <p>AdSense can't be your business. AdSense rewards views, not expertise. Your expertise deserves more than ad revenue.</p>
+      </div>
+      <div class="pain-card">
         <span class="pain-icon">↗</span>
-        <h3>Need Revenue Beyond Sponsorships</h3>
-        <p>You know brand deals can't be your only income forever. You want something you own, something that compounds — you just haven't built it yet.</p>
+        <h3>Need Income Beyond Sponsorships</h3>
+        <p>You know brand deals can't be your only income forever. You want something you own, something that compounds, you just haven't built it yet.</p>
       </div>
       <div class="pain-card">
         <span class="pain-icon">🔗</span>
         <h3>Affiliate Income Isn't Enough</h3>
-        <p>You share links, a few people click, and the commission barely adds up. It works as a nice bonus — not as a real income stream you can count on.</p>
+        <p>You share links, a few people click, and the commission barely adds up. It works as a nice bonus, not as a real income stream you can count on.</p>
       </div>
       <div class="pain-card">
         <span class="pain-icon">📩</span>
         <h3>Followers Already Ask For Help</h3>
-        <p>People DM you for advice, recommendations, and guidance every day. The demand is already there — you just don't have a way to monetize it yet.</p>
+        <p>People DM you for advice, recommendations, and guidance every day. The demand is already there, you just don't have a way to monetize it yet.</p>
       </div>
       <div class="pain-card">
         <span class="pain-icon">🔄</span>
         <h3>Trapped In The Low-Ticket Cycle</h3>
-        <p>Ebooks at $9, PDFs at $7, tracking sheets for $5. You'd need thousands of sales every month just to hit decent income. Low-ticket keeps you busy — not wealthy.</p>
+        <p>Ebooks at $9, PDFs at $7, tracking sheets for $5. You'd need thousands of sales every month just to hit decent income. Low-ticket keeps you busy, not wealthy.</p>
       </div>
       <div class="pain-card">
         <span class="pain-icon">🗺️</span>
         <h3>No Clear Product Or Launch Plan</h3>
-        <p>You have an audience that trusts you but nothing of your own to sell them. You don't know what they'd actually pay for — or where to begin.</p>
+        <p>You have an audience that trusts you but nothing of your own to offer them. And even when you think about creating something, you don't know what they'd actually pay for or where to begin.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🤖</span>
+        <h3>No Automated System Working While You Sleep</h3>
+        <p>No high-converting funnel, no automated follow-up, no system that turns a follower into a buyer without you manually stepping in every time. Your content works hard. Your backend doesn't work at all.</p>
       </div>
     </div>
-    <div class="pain-full reveal">
-      <span class="pain-icon">🤖</span>
-      <h3>No Automated System Working While You Sleep</h3>
-      <p>No high-converting funnel, no automated follow-up, no system that turns a follower into a buyer without you manually stepping in every time. Your content works hard. Your backend doesn't work at all.</p>
+
+    <div class="reveal" style="text-align: center; margin-top: 3.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800; text-transform: uppercase; color: var(--text); line-height: 1.4; letter-spacing: 0.03em; margin: 0;">
+        These are not content problems. You're already showing up consistently.<br>
+        <span style="color: var(--lime);">These are monetization problems and that's exactly what I fix.</span>
+      </p>
     </div>
 
-    <div class="callout reveal">
-      These are not content problems. You're already showing up consistently. These are <em>monetization problems</em> — and that's exactly what I fix.
+    <div class="reveal" style="text-align: center; margin-top: 3rem;">
+      <p style="font-size: 0.95rem; color: var(--red); font-style: italic; font-weight: 300; margin: 0;">
+        Psst... Most creators have 2–3. If you have all 8, we should talk.
+      </p>
     </div>
   </div>
 </section>
@@ -590,8 +621,8 @@
     <p class="section-eyebrow reveal">Here's What I've Noticed</p>
     <h2 class="section-title reveal">Every creator I've spoken to<br>knows they should be<br>making <em>more.</em></h2>
 
-    <p class="what-body reveal">That's exactly where I come in. Not just a product. Not just a landing page. <em>A complete monetization infrastructure</em> — built around your audience, your expertise, and your goals.</p>
-    <p class="what-body reveal">You don't change a thing. No extra work, no upfront investment, no steep learning curve. <strong>You keep doing what you do best — creating content. I handle everything else.</strong></p>
+    <p class="what-body reveal">That's exactly where I come in. Not just a product. Not just a landing page. <em>A complete monetization infrastructure</em> built around your audience, your expertise, and your goals.</p>
+    <p class="what-body reveal">You don't change a thing. No technical work, no upfront investment, no steep learning curve. <strong>You keep doing what you do best, creating content. I handle everything else.</strong></p>
 
     <div class="what-quote reveal">And I only get paid when it works.</div>
 
@@ -606,7 +637,7 @@
     <div style="max-width:680px;">
       <p class="section-eyebrow reveal">Is This For You?</p>
       <h2 class="section-title reveal">I work with a specific type<br>of creator. <em>Here's how to<br>know you're one of them.</em></h2>
-      <p class="section-body reveal">Not every creator is the right fit — and that's okay. I'd rather be honest upfront than waste your time or mine.</p>
+      <p class="section-body reveal">Not every creator is the right fit and that's okay. I'd rather be honest upfront than waste your time or mine.</p>
     </div>
 
     <div class="fit-grid reveal">
@@ -615,15 +646,15 @@
         <h3>You Have The Audience. You're Ready To Build The Income.</h3>
         <div class="fit-item">
           <div class="fit-check">✓</div>
-          <div><div class="fit-item-title">20K–200K Instagram followers</div><div class="fit-item-body">Real influence, real trust — even if the income hasn't caught up yet.</div></div>
+          <div><div class="fit-item-title">You have an engaged audience</div><div class="fit-item-body">Whether you've built it on Instagram or YouTube, your audience trusts your expertise and keeps coming back to learn.</div></div>
         </div>
         <div class="fit-item">
           <div class="fit-check">✓</div>
-          <div><div class="fit-item-title">You teach something valuable</div><div class="fit-item-body">Finance, fitness, business, productivity, relationships, skills — content that genuinely helps people.</div></div>
+          <div><div class="fit-item-title">You teach something valuable</div><div class="fit-item-body">Finance, fitness, business, productivity, relationships, skills, content that genuinely helps people.</div></div>
         </div>
         <div class="fit-item">
           <div class="fit-check">✓</div>
-          <div><div class="fit-item-title">You're serious about monetization</div><div class="fit-item-body">Not just curious — you're ready to build something real and willing to show up for it.</div></div>
+          <div><div class="fit-item-title">You're serious about monetization</div><div class="fit-item-body">Not just curious, you're ready to build something real and willing to show up for it.</div></div>
         </div>
         <div class="fit-item">
           <div class="fit-check">✓</div>
@@ -639,10 +670,10 @@
 
       <div class="fit-col fit-bad">
         <div class="fit-col-header">✕ &nbsp; This isn't for you if…</div>
-        <h3>Some Creators I Genuinely Can't Help — And I'll Say So.</h3>
+        <h3>Some Creators I Genuinely Can't Help And I'll Say So.</h3>
         <div class="fit-item">
           <div class="fit-check">✕</div>
-          <div><div class="fit-item-title">Entertainment or meme pages</div><div class="fit-item-body">If your content is built on laughs and virality, there's no expertise to monetize — that's a different game entirely.</div></div>
+          <div><div class="fit-item-title">Entertainment or meme pages</div><div class="fit-item-body">If your content is built on laughs and virality, there's no expertise to monetize, that's a different game entirely.</div></div>
         </div>
         <div class="fit-item">
           <div class="fit-check">✕</div>
@@ -654,16 +685,19 @@
         </div>
         <div class="fit-item">
           <div class="fit-check">✕</div>
-          <div><div class="fit-item-title">Not open to collaboration</div><div class="fit-item-body">This is a true partnership. If you're not comfortable sharing and building together — it won't work.</div></div>
+          <div><div class="fit-item-title">Not open to collaboration</div><div class="fit-item-body">This is a true partnership. If you're not comfortable sharing and building together, it won't work.</div></div>
         </div>
         <div class="fit-item">
           <div class="fit-check">✕</div>
-          <div><div class="fit-item-title">Already fully monetized</div><div class="fit-item-body">If you already have a thriving product suite and funnel — great. You probably don't need me.</div></div>
+          <div><div class="fit-item-title">Already fully monetized</div><div class="fit-item-body">If you already have a thriving product suite and funnel, great. You probably don't need me.</div></div>
         </div>
       </div>
 
-      <div class="fit-close">
-        If you read the left column and thought <strong>"that's me"</strong> — it probably is. The next step is a free 30-minute strategy call. No pitch. Just an honest look at what's possible.
+      <div class="reveal" style="grid-column: 1 / -1; text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border-soft); max-width: 800px; margin: 0 auto;">
+        <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800; text-transform: uppercase; color: var(--text); line-height: 1.4; letter-spacing: 0.03em; margin: 0;">
+          If you read the left column and thought <span style="color: var(--lime);">"that's me"</span> it probably is.<br>
+          The next step is a free 30-minute strategy call. No pitch. Just an honest look at what's possible.
+        </p>
       </div>
     </div>
   </div>
@@ -676,7 +710,7 @@
     <h2 class="section-title reveal">You Won't See Income<br><em>Screenshots Here.</em></h2>
 
     <div class="proof-quote reveal">
-      "Posting someone's private income to sell yourself is not a flex. It's a boundary crossed. The right numbers show up in the right room — and that room is <em>a private call.</em>"
+      "Posting someone's private income to sell yourself is not a flex. It's a boundary crossed. The right numbers show up in the right room and that room is <em>a private call.</em>"
     </div>
 
     <div class="proof-steps reveal">
@@ -684,21 +718,21 @@
         <div class="proof-num">01</div>
         <div>
           <div class="proof-step-title">Privacy Over Promotion</div>
-          <div class="proof-step-body">A creator's income is their personal business. I will never post their results publicly without explicit consent — no matter how good the numbers look.</div>
+          <div class="proof-step-body">A creator's income is their personal business. I will never post their results publicly without explicit consent, no matter how good the numbers look.</div>
         </div>
       </div>
       <div class="proof-step">
         <div class="proof-num">02</div>
         <div>
           <div class="proof-step-title">They Earn the Credit, Always</div>
-          <div class="proof-step-body">I work behind the scenes so their audience sees them grow through their own effort. I never take public credit — that would break the trust they've built with their followers.</div>
+          <div class="proof-step-body">I work behind the scenes so their audience sees them grow through their own effort. I never take public credit, as that would break the trust they've built with their followers.</div>
         </div>
       </div>
       <div class="proof-step">
         <div class="proof-num">03</div>
         <div>
           <div class="proof-step-title">Revenue Share Is the Real Proof</div>
-          <div class="proof-step-body">I only get paid when you grow. No retainers. No upfront fees. On the call — <em>I'll walk you through the full monetization system, map out your personal gameplan, and run the exact numbers on what this looks like for you specifically.</em></div>
+          <div class="proof-step-body">I only get paid when you grow. No retainers. No upfront fees. On the call, <em>I'll walk you through the full monetization system, map out your personal gameplan, and run the exact numbers on what this looks like for you specifically.</em></div>
         </div>
       </div>
     </div>
@@ -708,7 +742,7 @@
       <div class="call-items">
         <div class="call-item">A live revenue projection built around your audience size</div>
         <div class="call-item">The exact system that generates $10K+ monthly predictably</div>
-        <div class="call-item">Where we're at so far — honest context, no hype</div>
+        <div class="call-item">Where we're at so far, honest context, no hype</div>
       </div>
       <div class="call-unlocked">↑ unlocked the moment you book a call</div>
     </div>
@@ -722,12 +756,12 @@
       <div class="proof-badge">
         <div class="proof-badge-icon">🏆</div>
         <div class="proof-badge-title">You Take The Credit</div>
-        <div class="proof-badge-body">Your audience sees you winning. I stay invisible — by design.</div>
+        <div class="proof-badge-body">Your audience sees you winning. I stay invisible by design.</div>
       </div>
       <div class="proof-badge">
         <div class="proof-badge-icon">📊</div>
         <div class="proof-badge-title">Paid On Results</div>
-        <div class="proof-badge-body">Revenue share only. I have skin in the game — always.</div>
+        <div class="proof-badge-body">Revenue share only. I have skin in the game, always.</div>
       </div>
     </div>
 
@@ -747,12 +781,12 @@
 
     <div class="faq-list reveal">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What exactly do you handle — and what do I have to do?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">I build and run the entire backend: the offer design, the funnel, the email sequences, the automations, the payment setup, and the course hosting. You bring your knowledge and your audience. Your only job is to show up as yourself — the content you already create, the trust you've already built. <em>The system handles everything else.</em></div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">What exactly do you handle and what do I have to do?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">I build and run the entire backend: the offer design, the funnel, the email sequences, the automations, the payment setup, and the course hosting. You bring your knowledge and your audience. Your only job is to show up as yourself, the content you already create, the trust you've already built. <em>The system handles everything else.</em></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">If there's no upfront investment, how does this actually work?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">You keep 80%. I take 20%. No retainers, no upfront fees, no monthly charges. I only earn when you do — which means my incentive is completely aligned with yours. <em>If it doesn't generate income, I don't get paid.</em> That structure is intentional. It keeps me accountable to results, not just effort.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">You keep 80%. I take 20%. No retainers, no upfront fees, no monthly charges. I only earn when you do, which means my incentive is completely aligned with yours. <em>If it doesn't generate income, I don't get paid.</em> That structure is intentional. It keeps me accountable to results, not just effort.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">I've never launched anything before. Is that a problem?<span class="faq-arrow">+</span></button>
@@ -760,24 +794,24 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What kind of product will we build together?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A masterclass or digital course built around the knowledge you're already sharing for free — the thing your audience keeps asking you to go deeper on. We figure out the exact offer on the call and price it based on your niche and the level of trust you've built with your followers.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">A masterclass or digital course built around the knowledge you're already sharing for free, the thing your audience keeps asking you to go deeper on. We figure out the exact offer on the call and price it based on your niche and the level of trust you've built with your followers.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">My following is engaged but not huge — say, 25K. Does this still work?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Size matters far less than trust. <em>A 25K audience that genuinely listens to you will outperform a 250K audience that treats you like entertainment.</em> If your followers ask for your advice, follow your recommendations, and engage with your posts — the audience is ready. That's the only metric that actually matters.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">My following is engaged but not huge, say, 25K. Does this still work?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Size matters far less than trust. <em>A 25K audience that genuinely listens to you will outperform a 250K audience that treats you like entertainment.</em> If your followers ask for your advice, follow your recommendations, and engage with your posts, the audience is ready. That's the only metric that actually matters.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What if it doesn't convert? What's my risk?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">You've invested nothing upfront. If a launch doesn't perform, you've lost no money. I've lost the time, money, and resources I put into building it — the softwares, the automations, the entire backend infrastructure. That's not charity — it's how the model keeps me accountable. I don't get paid for effort. I only get paid for results.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">You've invested nothing upfront. If a launch doesn't perform, you've lost no money. I've lost the time, money, and resources I put into building it, including the softwares, the automations, and the entire backend infrastructure. That's not charity, it's how the model keeps me accountable. I don't get paid for effort. I only get paid for results.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Do I own everything we build?<span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Completely. Your audience, your brand, your product, your income. <em>I own none of it.</em> I build the infrastructure that runs behind the scenes — but the business, the relationship with your followers, and every dollar it generates belong entirely to you.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Completely. Your audience, your brand, your product, your income. <em>I own none of it.</em> I build the infrastructure that runs behind the scenes, but the business, the relationship with your followers, and every dollar it generates belong entirely to you.</div></div>
       </div>
     </div>
 
     <div style="text-align:center; margin-top:3rem; padding:2.5rem; border:1px solid var(--border-soft); background:var(--bg-card);">
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.4rem;">Still have a question that isn't covered here?<br>I'll answer it directly — no pitch, no pressure.</p>
+      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.4rem;">Still have a question that isn't covered here?<br>I'll answer it directly, no pitch, no pressure.</p>
       <a href="#book" class="btn-lime">Book a Free Discovery Call</a>
     </div>
   </div>
@@ -787,7 +821,7 @@
 <section class="cta-section" id="book">
   <div class="cta-glow"></div>
   <h2>Your Audience Is Ready.<br>The Only Thing Missing<br>Is <em>The System.</em></h2>
-  <p>30 minutes. No pitch. Just a clear, honest look at what your audience can generate — and what it would take to get there.</p>
+  <p>30 minutes. No pitch. Just a clear, honest look at what your audience can generate and what it would take to get there.</p>
   <a href="https://calendly.com/thezohanariz/revenue-roadmap" target="_blank" class="btn-lime" style="font-size:1.05rem; padding:1.2rem 3rem; position:relative; z-index:1;">Book Your Free Strategy Call →</a>
   <p class="cta-note">No obligation · Revenue share only · You keep 80%</p>
 </section>

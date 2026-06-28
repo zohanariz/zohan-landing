@@ -63,19 +63,19 @@ export default function FitTest() {
   }, { scope: containerRef });
 
   const rightFit = [
-    { title: "20K–200K Instagram followers", desc: "Real influence, real trust — even if the income hasn't caught up yet." },
-    { title: "You teach something valuable", desc: "Finance, fitness, business, productivity, relationships, skills — content that genuinely helps people." },
-    { title: "You're serious about monetization", desc: "Not just curious — you're ready to build and are willing to share and build together." },
+    { title: "You have an engaged audience", desc: "Whether you've built it on Instagram or YouTube, your audience trusts your expertise and keeps coming back to learn." },
+    { title: "You teach something valuable", desc: "Finance, fitness, business, productivity, relationships, skills, content that genuinely helps people." },
+    { title: "You're serious about monetization", desc: "Not just curious, you're ready to build and are willing to share and build together." },
     { title: "Committed and dedicated", desc: "You're consistent with your content and you bring that same energy to building your business." },
     { title: "People already ask you for help", desc: "You're consistent. The demand. You just need the system to convert it." }
   ];
 
   const wrongFit = [
-    { title: "Entertainment or meme pages", desc: "If your content lives on laughs and virality, there's no expertise to monetize — and that's a different game entirely." },
+    { title: "Entertainment or meme pages", desc: "If your content lives on laughs and virality, there's no expertise to monetize, and that's a different game entirely." },
     { title: "Looking for overnight results", desc: "This is a real business being built. If you want a quick hack, I'm not your person." },
     { title: "Lifestyle or aesthetic-only content", desc: "Beautiful feed with no educational value won't have a product waiting inside them yet." },
-    { title: "Not open to collaboration", desc: "This is a true partnership. If you're not comfortable sharing, iterating, and building together — it won't work." },
-    { title: "Already fully monetized", desc: "If you already have a thriving product suite and funnel — great. You probably don't need me." }
+    { title: "Not open to collaboration", desc: "This is a true partnership. If you're not comfortable sharing, iterating, and building together, it won't work." },
+    { title: "Already fully monetized", desc: "If you already have a thriving product suite and funnel, great. You probably don't need me." }
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function FitTest() {
             I work with a specific type of creator.<br className="hidden sm:inline" /> Here's how to know <em className="font-outfit italic font-light text-gold">you're one of them.</em>
           </h2>
           <p className="fit-header-reveal text-sm md:text-[15px] text-muted leading-relaxed">
-            Not every creator is the right fit — and that's okay. I'd rather be honest upfront than waste your time or mine.
+            Not every creator is the right fit and that's okay. I'd rather be honest upfront than waste your time or mine.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function FitTest() {
                 ✗ &nbsp; This Isn't For You If…
               </div>
               <h3 className="font-outfit text-2xl font-extrabold text-white mb-7 leading-snug">
-                Some creators I genuinely can't help — and I'll say so.
+                Some creators I genuinely can't help and I'll say so.
               </h3>
 
               <ul className="flex flex-col gap-4 list-none">
@@ -149,10 +149,13 @@ export default function FitTest() {
           </div>
         </div>
 
-        {/* Lower Bottom Banner Span */}
-        <p className="fit-header-reveal text-center text-sm md:text-[14px] text-muted italic leading-relaxed max-w-[600px] mx-auto font-light">
-          If you read the left column and thought <strong className="text-white font-semibold">"that's me"</strong> — it probably is. The next step is a free 15-minute strategy call. No pitch. Just an honest look at what's possible.
-        </p>
+        {/* Highlighted statement: Big, Bold, Non-Skimmable, Outfit font, "that's me" in Green */}
+        <div className="fit-header-reveal text-center max-w-3xl mx-auto mt-16 px-4">
+          <p className="font-outfit text-base sm:text-lg md:text-xl font-extrabold text-white leading-relaxed">
+            If you read the left column and thought <span className="text-gold font-black">"that's me"</span> it probably is.<br className="hidden sm:inline" />
+            The next step is a free 15-minute strategy call. No pitch. Just an honest look at what's possible.
+          </p>
+        </div>
 
       </div>
     </section>

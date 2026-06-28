@@ -149,11 +149,11 @@ export default function WhatWeDo({ onOpenBooking }: WhatWeDoProps) {
           <div className="flex flex-col items-start text-left max-w-[540px]">
             {/* Body Text */}
             <p className="position-reveal text-[#F0ECE3]/65 text-base leading-[1.85] mb-5 font-light">
-              That's exactly where I come in. Not just a product. Not just a landing page. <strong className="text-gold font-medium">A complete monetization infrastructure</strong> — built around your audience, your expertise, and your goals.
+              That's exactly where I come in. Not just a product. Not just a landing page. <strong className="text-gold font-medium">A complete monetization infrastructure</strong> built around your audience, your expertise, and your goals.
             </p>
 
             <p className="position-reveal text-[#F0ECE3]/65 text-base leading-[1.85] mb-7 font-light">
-              You don't change a thing. No extra work, no upfront investment, no steep learning curve. <strong className="text-white font-semibold">You keep doing what you do best — creating content. I handle everything else.</strong>
+              You don't change a thing. No technical work, no upfront investment, no steep learning curve. <strong className="text-white font-semibold">You keep doing what you do best, creating content. I handle everything else.</strong>
             </p>
 
             {/* Kicker */}
