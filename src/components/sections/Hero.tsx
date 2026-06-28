@@ -192,16 +192,16 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         {/* Title */}
         <h1 className="hero-anim font-outfit text-white text-[26px] sm:text-[32px] md:text-[38px] lg:text-[46px] xl:text-[52px] font-black leading-[1.15] tracking-wide [word-spacing:0.14em] uppercase max-w-none mb-6">
-          You've Built the <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case">Audience.</span><br />Now Let's Build <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case">Predictable Monthly Income.</span>
+          You've Built the <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Audience.</span><br />Now Let's Build <span className="font-outfit italic font-black text-gold bg-gradient-to-r from-gold to-gold2 bg-clip-text text-transparent normal-case drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">Predictable Monthly Income.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="hero-anim font-sans italic text-sm sm:text-base md:text-lg leading-[1.65] text-[#F0ECE3]/80 max-w-[760px] mb-10">
-          I help Instagram creators between <strong className="text-white font-bold">20K–200K followers</strong> make <strong className="text-white font-bold">$3K - $11K+ predictable monthly income</strong> beyond sponsorships and affiliates in <strong className="text-white font-bold">less than 27 days</strong> — <strong className="text-white font-bold">without any upfront investment</strong> or added effort.
+          I help <strong className="text-white font-bold">educational YouTube and Instagram creators</strong> like you launch a <strong className="text-white font-bold">high ticket coaching program</strong> built entirely on your existing expertise. You make <strong className="text-white font-bold">$3K to $11K+ in predictable monthly income</strong> beyond AdSense, sponsorships and affiliates <strong className="text-white font-bold">within 27 days</strong>.
         </p>
 
         {/* VSL Video Player Box */}
-        <div className="hero-anim w-full max-w-3xl aspect-video relative mb-10 group/vsl z-10">
+        <div className="hero-anim w-full max-w-3xl aspect-video relative mb-6 group/vsl z-10">
 
           {/* Video Player */}
           <div className="w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-black shadow-2xl relative">
@@ -238,6 +238,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             )}
           </div>
         </div>
+
+        {/* VSL Info Subtext */}
+        <p className="hero-anim font-sans italic text-sm sm:text-base leading-[1.65] text-[#F0ECE3]/85 max-w-[720px] mb-10">
+          We charge nothing upfront and handle every technical piece so you just show up as the expert you already are and do what you already do best: <strong className="text-white font-semibold">Content.</strong>
+        </p>
 
         {/* Actions Button */}
         <div className="hero-anim flex flex-col items-center gap-3">
