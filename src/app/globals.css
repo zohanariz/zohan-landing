@@ -12,8 +12,8 @@
   
   --color-gold: #7CFF4D;
   --color-gold2: #9EFF7D;
-  --color-dark: transparent;
-  --color-dark2: rgba(17, 17, 17, 0.65);
+  --color-dark: #000000;
+  --color-dark2: #000000;
   --color-dark3: #161616;
   --color-dark4: #1C1C1C;
   --color-dark5: #222222;
@@ -38,15 +38,15 @@
 :root {
   --gold: #7CFF4D;
   --gold2: #9EFF7D;
-  --dark: transparent;
-  --dark2: rgba(17, 17, 17, 0.65);
+  --dark: #000000;
+  --dark2: #000000;
   --dark3: #161616;
   --dark4: #1C1C1C;
   --dark5: #222222;
   --white: #F0ECE3;
   --muted-text: #7A7670;
   
-  --background: #0D0D0D;
+  --background: #000000;
   --foreground: #F0ECE3;
   
   --card: #161616;
@@ -83,13 +83,12 @@
   }
   
   html {
-    background: #0D0D0D;
+    background: #000000;
   }
   
   body {
     @apply text-foreground font-sans antialiased font-light;
-    background: radial-gradient(circle at 50% 0%, #0d260f 0%, #081508 40%, #000000 100%) no-repeat;
-    background-attachment: fixed;
+    background: #000000;
     overflow-x: hidden;
     line-height: 1.6;
   }

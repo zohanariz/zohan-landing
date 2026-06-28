@@ -171,7 +171,7 @@ export default function StrategySession() {
   ];
 
   return (
-    <section id="strategy-session" ref={containerRef} className="w-full py-24 bg-[#0A0A0A] border-t border-[#2D2D2D] relative">
+    <section id="strategy-session" ref={containerRef} className="w-full py-24 bg-black border-t border-[#2D2D2D] relative">
       <div className="max-w-6xl mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
         {/* Left Column Info */}

@@ -39,7 +39,7 @@ export default function Stats() {
   ];
 
   return (
-    <div ref={containerRef} className="w-full bg-[#0A0A0A] border-y border-[#2D2D2D] py-0 z-10 relative">
+    <div ref={containerRef} className="w-full bg-black border-y border-[#2D2D2D] py-0 z-10 relative">
       <div className="max-w-6xl mx-auto px-6 md:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#2D2D2D] border-x border-[#2D2D2D]">
           {stats.map((stat, i) => (

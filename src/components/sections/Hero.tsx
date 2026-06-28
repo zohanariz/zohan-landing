@@ -81,12 +81,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-[#040c05]/30 to-black px-6 md:px-16 pt-36 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-black px-6 md:px-16 pt-36 pb-20 overflow-hidden"
     >
-      {/* Ambient Gradient Glows */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[radial-gradient(circle,rgba(124,255,77,0.08)_0%,transparent_70%)] pointer-events-none z-0 blur-3xl" />
-      <div className="absolute top-[20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.05)_0%,transparent_70%)] pointer-events-none z-0 blur-3xl" />
-      <div className="absolute -top-[250px] left-1/2 -translate-x-1/2 w-[1000px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(124,255,77,0.07)_0%,transparent_70%)] pointer-events-none z-0 blur-3xl" />
 
       {/* Grid Overlay */}
       <div
