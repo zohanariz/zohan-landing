@@ -316,7 +316,7 @@ export default function PainPoints() {
 
           {/* Value Callout Banner (Centered, Bold, Two Lines, font-outfit) */}
           <div className="pain-card-reveal mt-16 max-w-4xl mx-auto text-center">
-            <p className="font-outfit text-base sm:text-lg md:text-xl font-extrabold text-white leading-relaxed">
+            <p className="font-cursive text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed tracking-wide">
               These are not content problems. You're already showing up consistently.<br className="hidden sm:inline" />
               <span className="text-gold">These are monetization problems and that's exactly what I fix.</span>
             </p>

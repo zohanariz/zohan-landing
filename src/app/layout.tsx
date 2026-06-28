@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, JetBrains_Mono, Anton, Outfit } from "next/font/google";
+import { Playfair_Display, Inter, JetBrains_Mono, Anton, Outfit, Caveat } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -34,6 +34,12 @@ const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
+const caveat = Caveat({
+  variable: "--font-cursive",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Zohan Ariz | Turn Your Instagram Audience Into Recurring Income",
   description: "Help Instagram creators (20K–200K followers) build predictable $3K – $11K+ monthly recurring income from digital products in under 27 days. No sponsorships, affiliates, or upfront investment required.",
@@ -54,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} ${anton.variable} ${outfit.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} ${anton.variable} ${outfit.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
